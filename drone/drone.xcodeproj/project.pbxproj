@@ -28,6 +28,9 @@
 		0C35243C2977269B002462FF /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C35242629772699002462FF /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C352444297726BA002462FF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C35240329772686002462FF /* Domain.framework */; };
 		0C352445297726BB002462FF /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C35240329772686002462FF /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C35244B29772A78002462FF /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C35244A29772A78002462FF /* input.json */; };
+		0C35244F29772C4A002462FF /* Drone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35244E29772C4A002462FF /* Drone.swift */; };
+		0C35245329772D92002462FF /* Plateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35245229772D92002462FF /* Plateau.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +146,9 @@
 		0C35242929772699002462FF /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
 		0C35242F2977269B002462FF /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3524362977269B002462FF /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		0C35244A29772A78002462FF /* input.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
+		0C35244E29772C4A002462FF /* Drone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drone.swift; sourceTree = "<group>"; };
+		0C35245229772D92002462FF /* Plateau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plateau.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,7 @@
 				0C3523D4297725E7002462FF /* droneApp.swift */,
 				0C3523D8297725EF002462FF /* Assets.xcassets */,
 				0C3523DA297725EF002462FF /* Preview Content */,
+				0C35244A29772A78002462FF /* input.json */,
 			);
 			path = drone;
 			sourceTree = "<group>";
@@ -271,6 +278,8 @@
 		0C35240429772686002462FF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0C35245029772D61002462FF /* Plateau */,
+				0C35244C29772C0C002462FF /* Drone */,
 				0C35240529772686002462FF /* Domain.h */,
 				0C35240629772686002462FF /* Domain.docc */,
 			);
@@ -315,6 +324,38 @@
 				0C3523D6297725E7002462FF /* ContentView.swift */,
 			);
 			path = Mobile;
+			sourceTree = "<group>";
+		};
+		0C35244C29772C0C002462FF /* Drone */ = {
+			isa = PBXGroup;
+			children = (
+				0C35244D29772C17002462FF /* Model */,
+			);
+			path = Drone;
+			sourceTree = "<group>";
+		};
+		0C35244D29772C17002462FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C35244E29772C4A002462FF /* Drone.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0C35245029772D61002462FF /* Plateau */ = {
+			isa = PBXGroup;
+			children = (
+				0C35245129772D6F002462FF /* Model */,
+			);
+			path = Plateau;
+			sourceTree = "<group>";
+		};
+		0C35245129772D6F002462FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C35245229772D92002462FF /* Plateau.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3523DC297725EF002462FF /* Preview Assets.xcassets in Resources */,
+				0C35244B29772A78002462FF /* input.json in Resources */,
 				0C3523D9297725EF002462FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,7 +659,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C35244F29772C4A002462FF /* Drone.swift in Sources */,
 				0C35240729772687002462FF /* Domain.docc in Sources */,
+				0C35245329772D92002462FF /* Plateau.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +857,7 @@
 		0C3523F6297725F1002462FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -841,6 +886,7 @@
 		0C3523F7297725F1002462FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
