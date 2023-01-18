@@ -33,7 +33,7 @@
 		0C35245329772D92002462FF /* Plateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35245229772D92002462FF /* Plateau.swift */; };
 		0C36552E297867A8005BCAE6 /* TrackerDroneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */; };
 		0C365530297867BF005BCAE6 /* TrackerPlateauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */; };
-		0C365532297867D4005BCAE6 /* TrackerInstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */; };
+		0C365534297875F6005BCAE6 /* TrackerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C365533297875F6005BCAE6 /* TrackerErrors.swift */; };
 		0C51B8D82978175C00D1482E /* Tracker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8D72978175C00D1482E /* Tracker.docc */; };
 		0C51B8DE2978175D00D1482E /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; };
 		0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8E42978175D00D1482E /* TrackerTests.swift */; };
@@ -200,7 +200,7 @@
 		0C35245229772D92002462FF /* Plateau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plateau.swift; sourceTree = "<group>"; };
 		0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerDroneTests.swift; sourceTree = "<group>"; };
 		0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPlateauTests.swift; sourceTree = "<group>"; };
-		0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInstructionTests.swift; sourceTree = "<group>"; };
+		0C365533297875F6005BCAE6 /* TrackerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerErrors.swift; sourceTree = "<group>"; };
 		0C51B8D42978175C00D1482E /* Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C51B8D62978175C00D1482E /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
 		0C51B8D72978175C00D1482E /* Tracker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tracker.docc; sourceTree = "<group>"; };
@@ -462,7 +462,6 @@
 				0C51B8E42978175D00D1482E /* TrackerTests.swift */,
 				0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */,
 				0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */,
-				0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */,
 			);
 			path = TrackerTests;
 			sourceTree = "<group>";
@@ -484,6 +483,7 @@
 				0C51B90029781DBA00D1482E /* TrackerInstruction.swift */,
 				0C51B9092978230000D1482E /* TrackerMission.swift */,
 				0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */,
+				0C365533297875F6005BCAE6 /* TrackerErrors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -898,6 +898,7 @@
 				0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */,
 				0C51B906297820DA00D1482E /* TrackerDrone.swift in Sources */,
 				0C51B8F62978190B00D1482E /* Tracker.swift in Sources */,
+				0C365534297875F6005BCAE6 /* TrackerErrors.swift in Sources */,
 				0C51B9082978229200D1482E /* TrackerPosition.swift in Sources */,
 				0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */,
 				0C51B90129781DBA00D1482E /* TrackerInstruction.swift in Sources */,
@@ -910,7 +911,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */,
-				0C365532297867D4005BCAE6 /* TrackerInstructionTests.swift in Sources */,
 				0C36552E297867A8005BCAE6 /* TrackerDroneTests.swift in Sources */,
 				0C365530297867BF005BCAE6 /* TrackerPlateauTests.swift in Sources */,
 			);
