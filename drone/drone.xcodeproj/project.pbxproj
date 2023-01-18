@@ -31,6 +31,22 @@
 		0C35244B29772A78002462FF /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C35244A29772A78002462FF /* input.json */; };
 		0C35244F29772C4A002462FF /* Drone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35244E29772C4A002462FF /* Drone.swift */; };
 		0C35245329772D92002462FF /* Plateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35245229772D92002462FF /* Plateau.swift */; };
+		0C51B8D82978175C00D1482E /* Tracker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8D72978175C00D1482E /* Tracker.docc */; };
+		0C51B8DE2978175D00D1482E /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; };
+		0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8E42978175D00D1482E /* TrackerTests.swift */; };
+		0C51B8E62978175D00D1482E /* Tracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C51B8D62978175C00D1482E /* Tracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C51B8E92978175D00D1482E /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; };
+		0C51B8EA2978175D00D1482E /* Tracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C51B8F1297817C900D1482E /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; };
+		0C51B8F2297817C900D1482E /* Tracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C51B8F62978190B00D1482E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8F52978190B00D1482E /* Tracker.swift */; };
+		0C51B90129781DBA00D1482E /* TrackerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B90029781DBA00D1482E /* TrackerInstruction.swift */; };
+		0C51B90229781DBE00D1482E /* TrackerInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8FE29781D7400D1482E /* TrackerInstructions.swift */; };
+		0C51B90429781DC400D1482E /* TrackerPlateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8FA29781CC800D1482E /* TrackerPlateau.swift */; };
+		0C51B906297820DA00D1482E /* TrackerDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B905297820DA00D1482E /* TrackerDrone.swift */; };
+		0C51B9082978229200D1482E /* TrackerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9072978229200D1482E /* TrackerPosition.swift */; };
+		0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9092978230000D1482E /* TrackerMission.swift */; };
+		0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +113,34 @@
 			remoteGlobalIDString = 0C35240229772686002462FF;
 			remoteInfo = Domain;
 		};
+		0C51B8DF2978175D00D1482E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3523C9297725E7002462FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C51B8D32978175C00D1482E;
+			remoteInfo = Tracker;
+		};
+		0C51B8E12978175D00D1482E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3523C9297725E7002462FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3523D0297725E7002462FF;
+			remoteInfo = drone;
+		};
+		0C51B8E72978175D00D1482E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3523C9297725E7002462FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C51B8D32978175C00D1482E;
+			remoteInfo = Tracker;
+		};
+		0C51B8F3297817C900D1482E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3523C9297725E7002462FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C51B8D32978175C00D1482E;
+			remoteInfo = Tracker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +151,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0C35243C2977269B002462FF /* Data.framework in Embed Frameworks */,
+				0C51B8EA2978175D00D1482E /* Tracker.framework in Embed Frameworks */,
 				0C35241929772688002462FF /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -119,6 +164,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0C352445297726BB002462FF /* Domain.framework in Embed Frameworks */,
+				0C51B8F2297817C900D1482E /* Tracker.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +195,19 @@
 		0C35244A29772A78002462FF /* input.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
 		0C35244E29772C4A002462FF /* Drone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drone.swift; sourceTree = "<group>"; };
 		0C35245229772D92002462FF /* Plateau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plateau.swift; sourceTree = "<group>"; };
+		0C51B8D42978175C00D1482E /* Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C51B8D62978175C00D1482E /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		0C51B8D72978175C00D1482E /* Tracker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tracker.docc; sourceTree = "<group>"; };
+		0C51B8DD2978175D00D1482E /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C51B8E42978175D00D1482E /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
+		0C51B8F52978190B00D1482E /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		0C51B8FA29781CC800D1482E /* TrackerPlateau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPlateau.swift; sourceTree = "<group>"; };
+		0C51B8FE29781D7400D1482E /* TrackerInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInstructions.swift; sourceTree = "<group>"; };
+		0C51B90029781DBA00D1482E /* TrackerInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInstruction.swift; sourceTree = "<group>"; };
+		0C51B905297820DA00D1482E /* TrackerDrone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerDrone.swift; sourceTree = "<group>"; };
+		0C51B9072978229200D1482E /* TrackerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPosition.swift; sourceTree = "<group>"; };
+		0C51B9092978230000D1482E /* TrackerMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMission.swift; sourceTree = "<group>"; };
+		0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMissionResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C35243B2977269B002462FF /* Data.framework in Frameworks */,
+				0C51B8E92978175D00D1482E /* Tracker.framework in Frameworks */,
 				0C35241829772688002462FF /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C352444297726BA002462FF /* Domain.framework in Frameworks */,
+				0C51B8F1297817C900D1482E /* Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +264,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3524302977269B002462FF /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8D12978175C00D1482E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8DA2978175D00D1482E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C51B8DE2978175D00D1482E /* Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +306,8 @@
 				0C35240C29772688002462FF /* DomainTests.xctest */,
 				0C35242629772699002462FF /* Data.framework */,
 				0C35242F2977269B002462FF /* DataTests.xctest */,
+				0C51B8D42978175C00D1482E /* Tracker.framework */,
+				0C51B8DD2978175D00D1482E /* TrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +315,8 @@
 		0C3523D3297725E7002462FF /* drone */ = {
 			isa = PBXGroup;
 			children = (
+				0C51B8D52978175C00D1482E /* Tracker */,
+				0C51B8E32978175D00D1482E /* TrackerTests */,
 				0C35242729772699002462FF /* Data */,
 				0C3524352977269B002462FF /* DataTests */,
 				0C35240429772686002462FF /* Domain */,
@@ -297,6 +377,7 @@
 		0C35242729772699002462FF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C51B8F8297819BC00D1482E /* Mission */,
 				0C35242829772699002462FF /* Data.h */,
 				0C35242929772699002462FF /* Data.docc */,
 			);
@@ -358,6 +439,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0C51B8D52978175C00D1482E /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				0C51B8F929781C9C00D1482E /* Model */,
+				0C51B8F52978190B00D1482E /* Tracker.swift */,
+				0C51B8D62978175C00D1482E /* Tracker.h */,
+				0C51B8D72978175C00D1482E /* Tracker.docc */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
+		0C51B8E32978175D00D1482E /* TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C51B8E42978175D00D1482E /* TrackerTests.swift */,
+			);
+			path = TrackerTests;
+			sourceTree = "<group>";
+		};
+		0C51B8F8297819BC00D1482E /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		0C51B8F929781C9C00D1482E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C51B9072978229200D1482E /* TrackerPosition.swift */,
+				0C51B905297820DA00D1482E /* TrackerDrone.swift */,
+				0C51B8FA29781CC800D1482E /* TrackerPlateau.swift */,
+				0C51B8FE29781D7400D1482E /* TrackerInstructions.swift */,
+				0C51B90029781DBA00D1482E /* TrackerInstruction.swift */,
+				0C51B9092978230000D1482E /* TrackerMission.swift */,
+				0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -374,6 +495,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3524382977269B002462FF /* Data.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8CF2978175C00D1482E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C51B8E62978175D00D1482E /* Tracker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +523,7 @@
 			dependencies = (
 				0C35241729772688002462FF /* PBXTargetDependency */,
 				0C35243A2977269B002462FF /* PBXTargetDependency */,
+				0C51B8E82978175D00D1482E /* PBXTargetDependency */,
 			);
 			name = drone;
 			productName = drone;
@@ -487,6 +617,7 @@
 			);
 			dependencies = (
 				0C352447297726BB002462FF /* PBXTargetDependency */,
+				0C51B8F4297817C900D1482E /* PBXTargetDependency */,
 			);
 			name = Data;
 			productName = Data;
@@ -510,6 +641,43 @@
 			name = DataTests;
 			productName = DataTests;
 			productReference = 0C35242F2977269B002462FF /* DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C51B8D32978175C00D1482E /* Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C51B8EF2978175E00D1482E /* Build configuration list for PBXNativeTarget "Tracker" */;
+			buildPhases = (
+				0C51B8CF2978175C00D1482E /* Headers */,
+				0C51B8D02978175C00D1482E /* Sources */,
+				0C51B8D12978175C00D1482E /* Frameworks */,
+				0C51B8D22978175C00D1482E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tracker;
+			productName = Tracker;
+			productReference = 0C51B8D42978175C00D1482E /* Tracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0C51B8DC2978175D00D1482E /* TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C51B8F02978175E00D1482E /* Build configuration list for PBXNativeTarget "TrackerTests" */;
+			buildPhases = (
+				0C51B8D92978175D00D1482E /* Sources */,
+				0C51B8DA2978175D00D1482E /* Frameworks */,
+				0C51B8DB2978175D00D1482E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C51B8E02978175D00D1482E /* PBXTargetDependency */,
+				0C51B8E22978175D00D1482E /* PBXTargetDependency */,
+			);
+			name = TrackerTests;
+			productName = TrackerTests;
+			productReference = 0C51B8DD2978175D00D1482E /* TrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -547,6 +715,13 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 0C3523D0297725E7002462FF;
 					};
+					0C51B8D32978175C00D1482E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C51B8DC2978175D00D1482E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C3523D0297725E7002462FF;
+					};
 				};
 			};
 			buildConfigurationList = 0C3523CC297725E7002462FF /* Build configuration list for PBXProject "drone" */;
@@ -569,6 +744,8 @@
 				0C35240B29772688002462FF /* DomainTests */,
 				0C35242529772699002462FF /* Data */,
 				0C35242E2977269B002462FF /* DataTests */,
+				0C51B8D32978175C00D1482E /* Tracker */,
+				0C51B8DC2978175D00D1482E /* TrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,6 +797,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C35242D2977269B002462FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8D22978175C00D1482E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8DB2978175D00D1482E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -689,6 +880,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C51B8D02978175C00D1482E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C51B8D82978175C00D1482E /* Tracker.docc in Sources */,
+				0C51B90229781DBE00D1482E /* TrackerInstructions.swift in Sources */,
+				0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */,
+				0C51B906297820DA00D1482E /* TrackerDrone.swift in Sources */,
+				0C51B8F62978190B00D1482E /* Tracker.swift in Sources */,
+				0C51B9082978229200D1482E /* TrackerPosition.swift in Sources */,
+				0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */,
+				0C51B90129781DBA00D1482E /* TrackerInstruction.swift in Sources */,
+				0C51B90429781DC400D1482E /* TrackerPlateau.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C51B8D92978175D00D1482E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -736,6 +951,26 @@
 			isa = PBXTargetDependency;
 			target = 0C35240229772686002462FF /* Domain */;
 			targetProxy = 0C352446297726BB002462FF /* PBXContainerItemProxy */;
+		};
+		0C51B8E02978175D00D1482E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C51B8D32978175C00D1482E /* Tracker */;
+			targetProxy = 0C51B8DF2978175D00D1482E /* PBXContainerItemProxy */;
+		};
+		0C51B8E22978175D00D1482E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3523D0297725E7002462FF /* drone */;
+			targetProxy = 0C51B8E12978175D00D1482E /* PBXContainerItemProxy */;
+		};
+		0C51B8E82978175D00D1482E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C51B8D32978175C00D1482E /* Tracker */;
+			targetProxy = 0C51B8E72978175D00D1482E /* PBXContainerItemProxy */;
+		};
+		0C51B8F4297817C900D1482E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C51B8D32978175C00D1482E /* Tracker */;
+			targetProxy = 0C51B8F3297817C900D1482E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1168,6 +1403,98 @@
 			};
 			name = Release;
 		};
+		0C51B8EB2978175E00D1482E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Tracker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C51B8EC2978175E00D1482E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Tracker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0C51B8ED2978175E00D1482E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.TrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/drone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/drone";
+			};
+			name = Debug;
+		};
+		0C51B8EE2978175E00D1482E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.TrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/drone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/drone";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1239,6 +1566,24 @@
 			buildConfigurations = (
 				0C3524412977269C002462FF /* Debug */,
 				0C3524422977269C002462FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C51B8EF2978175E00D1482E /* Build configuration list for PBXNativeTarget "Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C51B8EB2978175E00D1482E /* Debug */,
+				0C51B8EC2978175E00D1482E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C51B8F02978175E00D1482E /* Build configuration list for PBXNativeTarget "TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C51B8ED2978175E00D1482E /* Debug */,
+				0C51B8EE2978175E00D1482E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
