@@ -69,13 +69,4 @@ final class TrackerPlateauTests: XCTestCase {
         //Then
         XCTAssertFalse(result)
     }
-    
-    //MARK: mocks
-    struct MockPlateau: TrackerPlateau {
-        var topRightCorner: CGPoint
-        
-        static func getPlateau5x5() -> MockPlateau {
-            return MockPlateau(topRightCorner: CGPoint(x: 5, y: 5))
-        }
-    }
 }

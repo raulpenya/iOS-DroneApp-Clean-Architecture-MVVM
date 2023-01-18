@@ -10,7 +10,6 @@ import Foundation
 public protocol TrackerDrone {
     var speed: Double { get set }
     var currentPosition: TrackerPosition { get set }
-    func execute(movement: TrackerMovement) -> TrackerDrone
 }
 
 extension TrackerDrone {
