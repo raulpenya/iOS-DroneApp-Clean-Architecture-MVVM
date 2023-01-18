@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrackerResult {
+public protocol TrackerResult {
     var success: Bool { get set }
     var error: Error? { get set }
 }
@@ -22,7 +22,7 @@ class Result: TrackerResult {
     }
 }
 
-protocol TrackerMissionResult {
+public protocol TrackerMissionResult {
     var mission: TrackerMission { get set }
     var result: TrackerResult { get set }
 }

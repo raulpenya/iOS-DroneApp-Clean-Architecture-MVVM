@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrackerDrone {
+public protocol TrackerDrone {
     var speed: Double { get set }
     var currentPosition: TrackerPosition { get set }
     func execute(movement: TrackerMovement) -> TrackerDrone

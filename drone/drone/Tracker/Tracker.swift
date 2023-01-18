@@ -7,14 +7,14 @@
 
 import Foundation
 
-class Tracker {
-    func getResult(from mission: TrackerMission) -> TrackerMissionResult {
+public class Tracker {
+    public func getResult(from mission: TrackerMission) -> TrackerMissionResult {
         return calculatePath(with: mission)
     }
 }
 
-extension Tracker { // private methods
-    private func calculatePath(with mission: TrackerMission) -> TrackerMissionResult {
+internal extension Tracker { // private methods
+    func calculatePath(with mission: TrackerMission) -> TrackerMissionResult {
         let instructions = mission.instructions
         var drone = mission.drone
         let plateau = mission.plateau
@@ -36,11 +36,11 @@ extension Tracker { // private methods
         
     }
     
-    private func execute(instruction: TrackerInstruction, with drone: TrackerDrone) -> TrackerDrone {
+    func execute(instruction: TrackerInstruction, with drone: TrackerDrone) -> TrackerDrone {
         return drone.execute(movement: instruction.movement)
     }
     
-    private func checkDronePosition(_ position: TrackerPosition, in plateau: TrackerPlateau) -> Bool {
+    func checkDronePosition(_ position: TrackerPosition, in plateau: TrackerPlateau) -> Bool {
         return plateau.isPositionWithinTheBoundaries(position.coordinate)
     }
 }

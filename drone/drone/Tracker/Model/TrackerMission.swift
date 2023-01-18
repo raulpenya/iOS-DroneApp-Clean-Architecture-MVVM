@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrackerMission {
+public protocol TrackerMission {
     var drone: TrackerDrone { get set }
     var plateau: TrackerPlateau { get set }
     var instructions: TrackerInstructions { get set }

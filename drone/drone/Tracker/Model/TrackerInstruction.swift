@@ -13,7 +13,7 @@ public enum TrackerMovement {
     case forward
 }
 
-protocol TrackerInstruction {
+public protocol TrackerInstruction {
     var movement: TrackerMovement { get set }
 //    static func createInstruction(_ instruction: String) -> TrackerMovement?
 }

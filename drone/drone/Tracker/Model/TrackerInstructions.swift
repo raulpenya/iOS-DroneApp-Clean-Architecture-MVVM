@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol TrackerInstructions {
+public protocol TrackerInstructions {
     var instructions: [TrackerInstruction] { get set }
 }
