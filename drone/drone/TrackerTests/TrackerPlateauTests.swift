@@ -70,6 +70,7 @@ final class TrackerPlateauTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
+    //MARK: mocks
     struct MockPlateau: TrackerPlateau {
         var topRightCorner: CGPoint
         
