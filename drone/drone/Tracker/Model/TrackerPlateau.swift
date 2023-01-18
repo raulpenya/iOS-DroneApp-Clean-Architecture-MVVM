@@ -14,6 +14,6 @@ protocol TrackerPlateau {
 
 extension TrackerPlateau {
     func isPositionWithinTheBoundaries(_ point: CGPoint) -> Bool {
-        return point.x > 0 && point.y > 0 && point.x <= topRightCorner.x && point.y <= topRightCorner.y
+        return point.x >= 0 && point.y >= 0 && point.x <= topRightCorner.x && point.y <= topRightCorner.y
     }
 }
