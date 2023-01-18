@@ -10,11 +10,11 @@ import Foundation
 protocol TrackerDrone {
     var speed: Double { get set }
     var currentPosition: TrackerPosition { get set }
-    func execute(movement: Movement) -> TrackerDrone
+    func execute(movement: TrackerMovement) -> TrackerDrone
 }
 
 extension TrackerDrone {
-    func execute(movement: Movement) -> TrackerDrone {
+    func execute(movement: TrackerMovement) -> TrackerDrone {
         var drone = self
         var newPosition: TrackerPosition = drone.currentPosition
         switch movement {
@@ -23,19 +23,19 @@ extension TrackerDrone {
         case .left:
             newPosition = drone.turnLeft()
         case .forward:
-            newPosition = drone.moveAhead()
+            newPosition = drone.moveForward()
         }
         drone.currentPosition = newPosition
         return drone
     }
     
-    private func turnRight() -> TrackerPosition {
+    internal func turnRight() -> TrackerPosition {
         var newPosition = currentPosition
         var newDirection = newPosition.direction.rawValue + 1
-        if newDirection > Direction.west.rawValue {
-            newDirection = Direction.north.rawValue
+        if newDirection > TrackerDirection.west.rawValue {
+            newDirection = TrackerDirection.north.rawValue
         }
-        if let direction = Direction(rawValue: newDirection) {
+        if let direction = TrackerDirection(rawValue: newDirection) {
             newPosition.direction = direction
         } else {
             assert(false, "TrackerDrone :: turnRight :: direction wrong")
@@ -43,13 +43,13 @@ extension TrackerDrone {
         return newPosition
     }
     
-    private func turnLeft() -> TrackerPosition {
+    internal func turnLeft() -> TrackerPosition {
         var newPosition = currentPosition
         var newDirection = newPosition.direction.rawValue - 1
-        if newDirection < Direction.north.rawValue {
-            newDirection = Direction.west.rawValue
+        if newDirection < TrackerDirection.north.rawValue {
+            newDirection = TrackerDirection.west.rawValue
         }
-        if let direction = Direction(rawValue: newDirection) {
+        if let direction = TrackerDirection(rawValue: newDirection) {
             newPosition.direction = direction
         } else {
             assert(false, "TrackerDrone :: turnLeft :: direction wrong")
@@ -57,7 +57,7 @@ extension TrackerDrone {
         return newPosition
     }
     
-    private func moveAhead() -> TrackerPosition {
+    internal func moveForward() -> TrackerPosition {
         var newPosition = currentPosition
         var newCoordinate = newPosition.coordinate
         switch newPosition.direction {

@@ -7,31 +7,31 @@
 
 import Foundation
 
-public enum Movement {
+public enum TrackerMovement {
     case right
     case left
     case forward
 }
 
 protocol TrackerInstruction {
-    var movement: Movement { get set }
-    static func createInstruction(_ instruction: String) -> Movement?
+    var movement: TrackerMovement { get set }
+//    static func createInstruction(_ instruction: String) -> TrackerMovement?
 }
 
-extension TrackerInstruction {
-    static func createInstruction(_ movement: String) -> Movement? {
-        var newMovement: Movement? = nil
-        switch movement {
-        case "R":
-            newMovement = .right
-        case "L":
-            newMovement = .left
-        case "M":
-            newMovement = .forward
-        default:
-            assert(false, "TrackerInstruction :: createInstruction :: wrong instruction")
-            break
-        }
-        return newMovement
-    }
-}
+//extension TrackerInstruction {
+//    static func createInstruction(_ movement: String) -> TrackerMovement? {
+//        var newMovement: TrackerMovement? = nil
+//        switch movement {
+//        case "R":
+//            newMovement = .right
+//        case "L":
+//            newMovement = .left
+//        case "M":
+//            newMovement = .forward
+//        default:
+//            assert(false, "TrackerInstruction :: createInstruction :: wrong instruction")
+//            break
+//        }
+//        return newMovement
+//    }
+//}

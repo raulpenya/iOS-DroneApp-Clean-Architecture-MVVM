@@ -40,6 +40,7 @@ extension Tracker { // private methods
                                 userInfo: nil)
                 break
             }
+            drone = newDrone
         }
         let result = Result(success: success, error: error)
         return MissionResult(mission: mission, result: result)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Direction: Int {
+enum TrackerDirection: Int {
     case north = 1
     case east
     case south
@@ -15,6 +15,6 @@ enum Direction: Int {
 }
 
 protocol TrackerPosition {
-    var direction: Direction { get set }
+    var direction: TrackerDirection { get set }
     var coordinate: CGPoint { get set }
 }

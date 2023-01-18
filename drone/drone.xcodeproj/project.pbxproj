@@ -31,6 +31,9 @@
 		0C35244B29772A78002462FF /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C35244A29772A78002462FF /* input.json */; };
 		0C35244F29772C4A002462FF /* Drone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35244E29772C4A002462FF /* Drone.swift */; };
 		0C35245329772D92002462FF /* Plateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35245229772D92002462FF /* Plateau.swift */; };
+		0C36552E297867A8005BCAE6 /* TrackerDroneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */; };
+		0C365530297867BF005BCAE6 /* TrackerPlateauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */; };
+		0C365532297867D4005BCAE6 /* TrackerInstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */; };
 		0C51B8D82978175C00D1482E /* Tracker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8D72978175C00D1482E /* Tracker.docc */; };
 		0C51B8DE2978175D00D1482E /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C51B8D42978175C00D1482E /* Tracker.framework */; };
 		0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B8E42978175D00D1482E /* TrackerTests.swift */; };
@@ -195,6 +198,9 @@
 		0C35244A29772A78002462FF /* input.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
 		0C35244E29772C4A002462FF /* Drone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drone.swift; sourceTree = "<group>"; };
 		0C35245229772D92002462FF /* Plateau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plateau.swift; sourceTree = "<group>"; };
+		0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerDroneTests.swift; sourceTree = "<group>"; };
+		0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPlateauTests.swift; sourceTree = "<group>"; };
+		0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInstructionTests.swift; sourceTree = "<group>"; };
 		0C51B8D42978175C00D1482E /* Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C51B8D62978175C00D1482E /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
 		0C51B8D72978175C00D1482E /* Tracker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tracker.docc; sourceTree = "<group>"; };
@@ -454,6 +460,9 @@
 			isa = PBXGroup;
 			children = (
 				0C51B8E42978175D00D1482E /* TrackerTests.swift */,
+				0C36552D297867A8005BCAE6 /* TrackerDroneTests.swift */,
+				0C36552F297867BF005BCAE6 /* TrackerPlateauTests.swift */,
+				0C365531297867D4005BCAE6 /* TrackerInstructionTests.swift */,
 			);
 			path = TrackerTests;
 			sourceTree = "<group>";
@@ -901,6 +910,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */,
+				0C365532297867D4005BCAE6 /* TrackerInstructionTests.swift in Sources */,
+				0C36552E297867A8005BCAE6 /* TrackerDroneTests.swift in Sources */,
+				0C365530297867BF005BCAE6 /* TrackerPlateauTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
