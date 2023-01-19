@@ -9,13 +9,74 @@ import XCTest
 @testable import Tracker
 
 final class TrackerTests: XCTestCase {
-    //MARK: testCheckDronePosition
+    //MARK: testIsPositionInBoundaries
+    func testIsPositionInBoundariesTRUE() {
+        //Given
+        let position = MockPosition.getPositionPointingNorth()
+        let plateau = MockPlateau.getPlateau5x5()
+        let tracker = Tracker()
+        //When
+        let success = tracker.isPositionInBoundaries(position, in: plateau)
+        //Then
+        XCTAssertTrue(success)
+    }
     
+    func testIsPositionInBoundariesFALSE() {
+        //Given
+        let position = MockPosition.getPositionPointingNorthOutOfBounds()
+        let plateau = MockPlateau.getPlateau5x5()
+        let tracker = Tracker()
+        //When
+        let success = tracker.isPositionInBoundaries(position, in: plateau)
+        //Then
+        XCTAssertFalse(success)
+    }
     
     //MARK: testExecute
-    
+    func testExecuteInstruction() {
+        //Given
+        let drone = MockDrone.getDronePointingNorth()
+        let instruction = MockInstruction.getInstructionTurnRight()
+        let tracker = Tracker()
+        //When
+        let newDrone = tracker.execute(instruction: instruction, with: drone)
+        //Then
+        XCTAssertTrue(newDrone.currentPosition.direction == .east)
+    }
     
     //MARK: testCalculatePath
-    
+    func testCalculatePathREQUESTED() {
+        //Given
+        let mission = MockMission.getREQUESTEDMission()
+        let tracker = Tracker()
+        //When
+        let result = tracker.calculatePath(with: mission)
+        //Then
+        XCTAssertTrue(result.result.success)
+        XCTAssertTrue(result.result.error == nil)
+        XCTAssertEqual(result.result.position.direction, .north)
+        XCTAssertEqual(result.result.position.coordinate, CGPoint(x: 1, y: 3))
+    }
 
+    func testCalculatePathERRORInitialPosition() {
+        //Given
+        let mission = MockMission.getMissionWithWRONGInitialPosition()
+        let tracker = Tracker()
+        //When
+        let result = tracker.calculatePath(with: mission)
+        //Then
+        XCTAssertFalse(result.result.success)
+        XCTAssertEqual((result.result.error! as NSError).code, TrackerErrors.initialPositionOutOfBounds.code)
+    }
+    
+    func testCalculatePathERRORInstruction() {
+        //Given
+        let mission = MockMission.getMissionWithWRONGInstruction()
+        let tracker = Tracker()
+        //When
+        let result = tracker.calculatePath(with: mission)
+        //Then
+        XCTAssertFalse(result.result.success)
+        XCTAssertEqual((result.result.error! as NSError).code, TrackerErrors.instructionOutOfBounds.code)
+    }
 }

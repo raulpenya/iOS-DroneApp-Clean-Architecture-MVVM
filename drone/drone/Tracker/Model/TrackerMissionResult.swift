@@ -9,15 +9,18 @@ import Foundation
 
 public protocol TrackerResult {
     var success: Bool { get set }
+    var position: TrackerPosition { get set }
     var error: Error? { get set }
 }
 
 class Result: TrackerResult {
     var success: Bool
+    var position: TrackerPosition
     var error: Error?
     
-    init(success: Bool, error: Error? = nil) {
+    init(success: Bool, position: TrackerPosition, error: Error? = nil) {
         self.success = success
+        self.position = position
         self.error = error
     }
 }

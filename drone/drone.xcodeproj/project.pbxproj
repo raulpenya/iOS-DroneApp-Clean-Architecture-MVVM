@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2F57CB29794BE6005D9AF7 /* MockInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CA29794BE6005D9AF7 /* MockInstructions.swift */; };
+		0C2F57D02979536C005D9AF7 /* MockMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CE2979536C005D9AF7 /* MockMission.swift */; };
 		0C3523D5297725E7002462FF /* droneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523D4297725E7002462FF /* droneApp.swift */; };
 		0C3523D7297725E7002462FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523D6297725E7002462FF /* ContentView.swift */; };
 		0C3523D9297725EF002462FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3523D8297725EF002462FF /* Assets.xcassets */; };
@@ -179,6 +181,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C2F57CA29794BE6005D9AF7 /* MockInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstructions.swift; sourceTree = "<group>"; };
+		0C2F57CE2979536C005D9AF7 /* MockMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMission.swift; sourceTree = "<group>"; };
 		0C3523D1297725E7002462FF /* drone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3523D4297725E7002462FF /* droneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneApp.swift; sourceTree = "<group>"; };
 		0C3523D6297725E7002462FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -459,7 +463,9 @@
 				0C36553629787A2A005BCAE6 /* MockDrone.swift */,
 				0C36553829787A5F005BCAE6 /* MockPosition.swift */,
 				0C36553B29787A93005BCAE6 /* MockInstruction.swift */,
+				0C2F57CA29794BE6005D9AF7 /* MockInstructions.swift */,
 				0C36553D29787AD4005BCAE6 /* MockPlateau.swift */,
+				0C2F57CE2979536C005D9AF7 /* MockMission.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -930,6 +936,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2F57D02979536C005D9AF7 /* MockMission.swift in Sources */,
+				0C2F57CB29794BE6005D9AF7 /* MockInstructions.swift in Sources */,
 				0C36553C29787A93005BCAE6 /* MockInstruction.swift in Sources */,
 				0C36553729787A2A005BCAE6 /* MockDrone.swift in Sources */,
 				0C51B8E52978175D00D1482E /* TrackerTests.swift in Sources */,

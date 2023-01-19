@@ -20,27 +20,36 @@ internal extension Tracker { // private methods
         let plateau = mission.plateau
         var success = false
         var error: Error? = nil
-        for instruction in instructions.instructions {
-            let newDrone = execute(instruction: instruction, with: drone)
-            success = checkDronePosition(newDrone.currentPosition, in: plateau)
-            if !success {
-                error = NSError(domain: TrackerErrors.instructionOutOfBounds.localizedDescription,
-                                code: TrackerErrors.instructionOutOfBounds.code,
-                                userInfo: nil)
-                break
+        if isInitialPositionInBoundaries(drone.currentPosition, in: plateau) {
+            for instruction in instructions.instructions {
+                let newDrone = execute(instruction: instruction, with: drone)
+                success = isPositionInBoundaries(newDrone.currentPosition, in: plateau)
+                if !success {
+                    error = NSError(domain: TrackerErrors.instructionOutOfBounds.localizedDescription,
+                                    code: TrackerErrors.instructionOutOfBounds.code,
+                                    userInfo: nil)
+                    break
+                }
+                drone = newDrone
             }
-            drone = newDrone
+        } else {
+            error = NSError(domain: TrackerErrors.initialPositionOutOfBounds.localizedDescription,
+                            code: TrackerErrors.initialPositionOutOfBounds.code,
+                            userInfo: nil)
         }
-        let result = Result(success: success, error: error)
+        let result = Result(success: success, position: drone.currentPosition, error: error)
         return MissionResult(mission: mission, result: result)
-        
+    }
+    
+    func isInitialPositionInBoundaries(_ position: TrackerPosition, in plateau: TrackerPlateau) -> Bool {
+        return isPositionInBoundaries(position, in: plateau)
+    }
+    
+    func isPositionInBoundaries(_ position: TrackerPosition, in plateau: TrackerPlateau) -> Bool {
+        return plateau.isPositionWithinTheBoundaries(position.coordinate)
     }
     
     func execute(instruction: TrackerInstruction, with drone: TrackerDrone) -> TrackerDrone {
         return drone.execute(movement: instruction.movement)
-    }
-    
-    func checkDronePosition(_ position: TrackerPosition, in plateau: TrackerPlateau) -> Bool {
-        return plateau.isPositionWithinTheBoundaries(position.coordinate)
     }
 }
