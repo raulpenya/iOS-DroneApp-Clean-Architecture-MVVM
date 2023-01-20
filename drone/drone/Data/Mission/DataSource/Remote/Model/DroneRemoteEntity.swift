@@ -20,3 +20,10 @@ extension TrackerDrone {
         return Drone(currentPosition: position)
     }
 }
+
+extension Drone {
+    func transformToRemote() -> TrackerDrone? {
+        guard let position = currentPosition.transformToRemote() else { return nil }
+        return DroneRemoteEntity(currentPosition: position)
+    }
+}

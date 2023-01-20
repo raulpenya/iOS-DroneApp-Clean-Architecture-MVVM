@@ -21,6 +21,14 @@ extension TrackerInstructions {
     }
 }
 
+extension Instructions {
+    func transformToRemote() -> TrackerInstructions? {
+        let instructionsRemote = instructions.compactMap { $0.transformToRemote() }
+        guard instructions.count == instructionsRemote.count else { return nil }
+        return InstructionsRemoteEntity(instructions: instructionsRemote)
+    }
+}
+
 extension MissionDataRemoteEntity {
     func transformToInstructions() -> TrackerInstructions {
         let instructions = Array(movements).compactMap { String($0) }.compactMap { TrackerMovement.createMovement($0) }.compactMap { InstructionRemoteEntity(movement: $0) }

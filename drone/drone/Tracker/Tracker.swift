@@ -8,6 +8,7 @@
 import Foundation
 
 public class Tracker {
+    public init() {}
     public func getResult(from mission: TrackerMission) -> TrackerMissionResult {
         return calculatePath(with: mission)
     }

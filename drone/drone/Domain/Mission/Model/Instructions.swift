@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Instructions {
-    let instructions: [Instruction]
+    public let instructions: [Instruction]
     
     public init(instructions: [Instruction]) {
         self.instructions = instructions

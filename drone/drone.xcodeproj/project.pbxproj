@@ -63,7 +63,6 @@
 		0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9092978230000D1482E /* TrackerMission.swift */; };
 		0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */; };
 		0C66631E2979A61800700E96 /* MissionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */; };
-		0C6663232979A7DB00700E96 /* MissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663222979A7DB00700E96 /* MissionRepository.swift */; };
 		0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663222979A7DB00700E96 /* MissionRepository.swift */; };
 		0C6663282979A8B300700E96 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663272979A8B300700E96 /* UseCase.swift */; };
 		0C66632A2979AA1700700E96 /* ExecuteMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663292979AA1700700E96 /* ExecuteMission.swift */; };
@@ -947,7 +946,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3523D7297725E7002462FF /* ContentView.swift in Sources */,
-				0C6663232979A7DB00700E96 /* MissionRepository.swift in Sources */,
 				0C3523D5297725E7002462FF /* droneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

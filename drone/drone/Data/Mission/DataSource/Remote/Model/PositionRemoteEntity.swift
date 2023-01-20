@@ -21,6 +21,13 @@ extension TrackerPosition {
     }
 }
 
+extension Position {
+    func transformToRemote() -> TrackerPosition? {
+        guard let direction = TrackerDirection(rawValue: direction.rawValue) else { return nil }
+        return PositionRemoteEntity(direction: direction, coordinate: coordinate)
+    }
+}
+
 extension MissionDataRemoteEntity {
     func transformToRoverPosition() -> PositionRemoteEntity? {
         guard let x = roverPosition["x"], let y = roverPosition["y"], let direction = TrackerDirection.getDirectionWithString(roverDirection) else { return nil }

@@ -14,7 +14,7 @@ public enum Movement: Int {
 }
 
 public struct Instruction {
-    let movement: Movement
+    public let movement: Movement
     
     public init(movement: Movement) {
         self.movement = movement

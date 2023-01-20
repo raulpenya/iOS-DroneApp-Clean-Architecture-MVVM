@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Domain
+import Tracker
 
 public class MissionRemoteDataSource: MissionDataSource {
     
@@ -24,7 +25,12 @@ public class MissionRemoteDataSource: MissionDataSource {
         }
     }
     
-    public func getMissionResult() -> AnyPublisher<Bool, Error> {
+    public func getMissionResult(_ mission: Mission) -> AnyPublisher<Bool, Error> {
+        guard let missionRemote = mission.transformToRemote() else {
+            return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
+        }
+        let result = getResultFromTracket(mission: missionRemote)
+//        if result
         return Empty().eraseToAnyPublisher()
     }
 }
@@ -35,5 +41,9 @@ extension MissionRemoteDataSource {
             throw NSError(domain: "NoteRepository.getNotes.decode", code: 400)
         }
         return try JSONDecoder().decode(MissionDataRemoteEntity.self, from: data)
+    }
+    
+    func getResultFromTracket(_ tracker: Tracker = Tracker(), mission: TrackerMission) -> TrackerMissionResult {
+        return tracker.getResult(from: mission)
     }
 }

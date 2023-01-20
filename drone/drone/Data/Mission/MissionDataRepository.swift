@@ -18,6 +18,6 @@ public struct MissionDataRepository: MissionRepository {
     }
     
     public func getMissionResult(_ mission: Mission) -> AnyPublisher<Bool, Error> {
-        return remoteDataSource.getMissionResult()
+        return remoteDataSource.getMissionResult(mission)
     }
 }

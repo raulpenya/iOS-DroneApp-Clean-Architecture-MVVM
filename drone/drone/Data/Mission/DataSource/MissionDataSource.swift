@@ -7,8 +7,9 @@
 
 import Foundation
 import Combine
+import Domain
 
 public protocol MissionDataSource {
     func getMissionInfo() -> AnyPublisher<Mission, Error>
-    func getMissionResult() -> AnyPublisher<Bool, Error>
+    func getMissionResult(_ mission: Mission) -> AnyPublisher<Bool, Error>
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Mission {
-    let drone: Drone
-    let plateau: Plateau
-    let instructions: Instructions
+    public let drone: Drone
+    public let plateau: Plateau
+    public let instructions: Instructions
     
     public init(drone: Drone, plateau: Plateau, instructions: Instructions) {
         self.drone = drone

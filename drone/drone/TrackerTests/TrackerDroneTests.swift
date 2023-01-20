@@ -119,6 +119,7 @@ final class TrackerDroneTests: XCTestCase {
         //Then
         XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: -1, y: 0))
     }
+    //TODO: test drone.speed = 2
     
     //MARK: testExecute
     func testExecuteMovementLeftPointingNorth() {

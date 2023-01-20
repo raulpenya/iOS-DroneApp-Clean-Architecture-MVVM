@@ -22,3 +22,11 @@ extension MissionRemoteEntity {
         return Mission(drone: drone, plateau: plateau, instructions: instructions)
     }
 }
+
+extension Mission {
+    func transformToRemote() -> TrackerMission? {
+        guard let drone = drone.transformToRemote(), let instructions = instructions.transformToRemote() else { return nil }
+        let plateau = plateau.transformToRemote()
+        return MissionRemoteEntity(drone: drone, plateau: plateau, instructions: instructions)
+    }
+}

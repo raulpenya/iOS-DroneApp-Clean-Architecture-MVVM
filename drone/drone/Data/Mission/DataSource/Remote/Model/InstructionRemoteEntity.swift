@@ -20,3 +20,9 @@ extension TrackerInstruction {
     }
 }
 
+extension Instruction {
+    func transformToRemote() -> TrackerInstruction? {
+        guard let movement = TrackerMovement(rawValue: movement.rawValue) else { return nil }
+        return InstructionRemoteEntity(movement: movement)
+    }
+}
