@@ -29,13 +29,6 @@ extension Instructions {
     }
 }
 
-extension MissionDataRemoteEntity {
-    func transformToInstructions() -> TrackerInstructions {
-        let instructions = Array(movements).compactMap { String($0) }.compactMap { TrackerMovement.createMovement($0) }.compactMap { InstructionRemoteEntity(movement: $0) }
-        return InstructionsRemoteEntity(instructions: instructions)
-    }
-}
-
 extension TrackerMovement {
     static func createMovement(_ movement: String) -> TrackerMovement? {
         var newMovement: TrackerMovement? = nil
