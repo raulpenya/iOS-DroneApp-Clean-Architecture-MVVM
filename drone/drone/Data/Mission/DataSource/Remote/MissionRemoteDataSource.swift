@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Domain
 
 public class MissionRemoteDataSource: MissionDataSource {
     
@@ -14,10 +15,10 @@ public class MissionRemoteDataSource: MissionDataSource {
     
     public func getMissionInfo() -> AnyPublisher<Mission, Error> {
         do {
-            guard let mission = try getInfoFromFile().transformMissionRemoteEntity() else {
+            guard let mission = try getInfoFromFile().transformMissionRemoteEntity()?.transformToDomain() else {
                 return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
             }
-            return Result.Publisher(true).eraseToAnyPublisher()
+            return Result.Publisher(mission).eraseToAnyPublisher()
         } catch {
             return Fail(error: error).eraseToAnyPublisher()
         }

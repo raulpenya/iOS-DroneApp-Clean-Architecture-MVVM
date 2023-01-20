@@ -7,6 +7,14 @@
 
 import Foundation
 
-struct Mission {
+public struct Mission {
+    let drone: Drone
+    let plateau: Plateau
+    let instructions: Instructions
     
+    public init(drone: Drone, plateau: Plateau, instructions: Instructions) {
+        self.drone = drone
+        self.plateau = plateau
+        self.instructions = instructions
+    }
 }

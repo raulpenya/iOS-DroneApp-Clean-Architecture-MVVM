@@ -7,10 +7,18 @@
 
 import Foundation
 import Tracker
+import Domain
 
 struct PositionRemoteEntity: TrackerPosition {
     var direction: TrackerDirection
     var coordinate: CGPoint
+}
+
+extension TrackerPosition {
+    func transformToDomain() -> Position? {
+        guard let direction = Direction(rawValue: direction.rawValue) else { return nil }
+        return Position(direction: direction, coordinate: coordinate)
+    }
 }
 
 extension MissionDataRemoteEntity {

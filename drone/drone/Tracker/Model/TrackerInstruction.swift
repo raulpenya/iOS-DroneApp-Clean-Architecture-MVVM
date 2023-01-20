@@ -7,8 +7,8 @@
 
 import Foundation
 
-public enum TrackerMovement {
-    case right
+public enum TrackerMovement: Int {
+    case right = 1
     case left
     case forward
 }

@@ -71,6 +71,10 @@
 		0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */; };
 		0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663312979B52400700E96 /* PositionRemoteEntity.swift */; };
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
+		0CFE552F297AA63C00DBDF45 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE552E297AA63C00DBDF45 /* Instructions.swift */; };
+		0CFE5531297AA66400DBDF45 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5530297AA66400DBDF45 /* Instruction.swift */; };
+		0CFE5533297AA6A900DBDF45 /* InstructionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */; };
+		0CFE5535297AAA6000DBDF45 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5534297AAA6000DBDF45 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +259,10 @@
 		0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663312979B52400700E96 /* PositionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663352979BFB300700E96 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		0CFE552E297AA63C00DBDF45 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		0CFE5530297AA66400DBDF45 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRemoteEntity.swift; sourceTree = "<group>"; };
+		0CFE5534297AAA6000DBDF45 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +549,7 @@
 				0C6663312979B52400700E96 /* PositionRemoteEntity.swift */,
 				0C2F57DB297962C4005D9AF7 /* PlateauRemoteEntity.swift */,
 				0C2F57DD297962D6005D9AF7 /* InstructionsRemoteEntity.swift */,
+				0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -558,9 +567,12 @@
 		0C6663212979A7B100700E96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C35245229772D92002462FF /* Plateau.swift */,
-				0C35244E29772C4A002462FF /* Drone.swift */,
 				0C6663352979BFB300700E96 /* Mission.swift */,
+				0C35244E29772C4A002462FF /* Drone.swift */,
+				0CFE5534297AAA6000DBDF45 /* Position.swift */,
+				0C35245229772D92002462FF /* Plateau.swift */,
+				0CFE552E297AA63C00DBDF45 /* Instructions.swift */,
+				0CFE5530297AA66400DBDF45 /* Instruction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -961,12 +973,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFE5531297AA66400DBDF45 /* Instruction.swift in Sources */,
 				0C6663282979A8B300700E96 /* UseCase.swift in Sources */,
 				0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */,
+				0CFE552F297AA63C00DBDF45 /* Instructions.swift in Sources */,
 				0C66632A2979AA1700700E96 /* ExecuteMission.swift in Sources */,
 				0C35244F29772C4A002462FF /* Drone.swift in Sources */,
 				0C35240729772687002462FF /* Domain.docc in Sources */,
 				0C6663362979BFB300700E96 /* Mission.swift in Sources */,
+				0CFE5535297AAA6000DBDF45 /* Position.swift in Sources */,
 				0C35245329772D92002462FF /* Plateau.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -990,6 +1005,7 @@
 				0C2F57D329796266005D9AF7 /* MissionDataSource.swift in Sources */,
 				0C2F57E1297962DB005D9AF7 /* PlateauRemoteEntity.swift in Sources */,
 				0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */,
+				0CFE5533297AA6A900DBDF45 /* InstructionRemoteEntity.swift in Sources */,
 				0C2F57D629796290005D9AF7 /* MissionDataRepository.swift in Sources */,
 				0C66632E2979B0EF00700E96 /* FileLoader.swift in Sources */,
 				0C2F57DF297962DB005D9AF7 /* MissionRemoteEntity.swift in Sources */,

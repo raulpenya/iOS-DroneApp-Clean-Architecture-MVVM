@@ -7,9 +7,16 @@
 
 import Foundation
 import Tracker
+import Domain
 
 struct PlateauRemoteEntity: TrackerPlateau {
     var topRightCorner: CGPoint
+}
+
+extension TrackerPlateau {
+    func transformToDomain() -> Plateau {
+        return Plateau(topRightCorner: topRightCorner)
+    }
 }
 
 extension MissionDataRemoteEntity {

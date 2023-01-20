@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol Plateau {
-    var topRightCorner: CGPoint { get set }
+public struct Plateau {
+    public let topRightCorner: CGPoint
+    
+    public init(topRightCorner: CGPoint) {
+        self.topRightCorner = topRightCorner
+    }
 }

@@ -7,15 +7,10 @@
 
 import Foundation
 
-enum Direction {
-    case north
-    case south
-    case east
-    case west
-}
-
-protocol Drone {
-    var speed: Float { get set }
-    var direction: Direction { get set }
-    var currentPosition: CGPoint { get set }
+public struct Drone {
+    public let currentPosition: Position
+    
+    public init(currentPosition: Position) {
+        self.currentPosition = currentPosition
+    }
 }

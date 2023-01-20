@@ -7,13 +7,18 @@
 
 import Foundation
 import Tracker
+import Domain
 
 struct InstructionsRemoteEntity: TrackerInstructions {
     var instructions: [TrackerInstruction]
 }
 
-struct InstructionRemoteEntity: TrackerInstruction {
-    var movement: TrackerMovement
+extension TrackerInstructions {
+    func transformToDomain() -> Instructions? {
+        let instructionsDomain = instructions.compactMap { $0.transformToDomain() }
+        guard instructions.count == instructionsDomain.count else { return nil }
+        return Instructions(instructions: instructionsDomain)
+    }
 }
 
 extension MissionDataRemoteEntity {
