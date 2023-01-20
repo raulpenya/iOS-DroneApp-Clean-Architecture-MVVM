@@ -12,20 +12,8 @@ struct MockPosition: TrackerPosition {
     var direction: TrackerDirection
     var coordinate: CGPoint
     
-    static func getPositionPointingNorth() -> TrackerPosition {
-        return MockPosition(direction: .north, coordinate: .zero)
-    }
-    
-    static func getPositionPointingEast() -> TrackerPosition {
-        return MockPosition(direction: .east, coordinate: .zero)
-    }
-    
-    static func getPositionPointingSouth() -> TrackerPosition {
-        return MockPosition(direction: .south, coordinate: .zero)
-    }
-    
-    static func getPositionPointingWest() -> TrackerPosition {
-        return MockPosition(direction: .west, coordinate: .zero)
+    static func getPositionWithDirection(_ direction: TrackerDirection) -> TrackerPosition {
+        return MockPosition(direction: direction, coordinate: .zero)
     }
     
     static func getPositionPointingNorthOutOfBounds() -> TrackerPosition {

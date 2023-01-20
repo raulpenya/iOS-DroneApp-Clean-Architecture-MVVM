@@ -12,20 +12,8 @@ struct MockDrone: TrackerDrone {
     var speed: Double = 1
     var currentPosition: TrackerPosition
     
-    static func getDronePointingNorth() -> TrackerDrone {
-        return MockDrone(currentPosition: MockPosition.getPositionPointingNorth())
-    }
-    
-    static func getDronePointingEast() -> TrackerDrone {
-        return MockDrone(currentPosition: MockPosition.getPositionPointingEast())
-    }
-    
-    static func getDronePointingSouth() -> TrackerDrone {
-        return MockDrone(currentPosition: MockPosition.getPositionPointingSouth())
-    }
-    
-    static func getDronePointingWest() -> TrackerDrone {
-        return MockDrone(currentPosition: MockPosition.getPositionPointingWest())
+    static func getDrone(speed: Double = 1, direction: TrackerDirection) -> TrackerDrone {
+        return MockDrone(speed: speed, currentPosition: MockPosition.getPositionWithDirection(direction))
     }
     
     static func getDroneOutOfBoundsPointingNorth() -> TrackerDrone {

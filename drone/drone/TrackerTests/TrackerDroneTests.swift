@@ -12,7 +12,7 @@ final class TrackerDroneTests: XCTestCase {
     //MARK: testTurnLeft
     func testTurnLeftPointingNorth() {
         //Given
-        var drone = MockDrone.getDronePointingNorth()
+        var drone = MockDrone.getDrone(direction: .north)
         //When
         drone.currentPosition = drone.turnLeft()
         //Then
@@ -21,7 +21,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnLeftPointingEast() {
         //Given
-        var drone = MockDrone.getDronePointingEast()
+        var drone = MockDrone.getDrone(direction: .east)
         //When
         drone.currentPosition = drone.turnLeft()
         //Then
@@ -30,7 +30,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnLeftPointingSouth() {
         //Given
-        var drone = MockDrone.getDronePointingSouth()
+        var drone = MockDrone.getDrone(direction: .south)
         //When
         drone.currentPosition = drone.turnLeft()
         //Then
@@ -39,7 +39,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnLeftPointingWest() {
         //Given
-        var drone = MockDrone.getDronePointingWest()
+        var drone = MockDrone.getDrone(direction: .west)
         //When
         drone.currentPosition = drone.turnLeft()
         //Then
@@ -49,7 +49,7 @@ final class TrackerDroneTests: XCTestCase {
     //MARK: testTurnRight
     func testTurnRightPointingNorth() {
         //Given
-        var drone = MockDrone.getDronePointingNorth()
+        var drone = MockDrone.getDrone(direction: .north)
         //When
         drone.currentPosition = drone.turnRight()
         //Then
@@ -58,7 +58,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnRightPointingEast() {
         //Given
-        var drone = MockDrone.getDronePointingEast()
+        var drone = MockDrone.getDrone(direction: .east)
         //When
         drone.currentPosition = drone.turnRight()
         //Then
@@ -67,7 +67,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnRightPointingSouth() {
         //Given
-        var drone = MockDrone.getDronePointingSouth()
+        var drone = MockDrone.getDrone(direction: .south)
         //When
         drone.currentPosition = drone.turnRight()
         //Then
@@ -76,7 +76,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testTurnRightPointingWest() {
         //Given
-        var drone = MockDrone.getDronePointingWest()
+        var drone = MockDrone.getDrone(direction: .west)
         //When
         drone.currentPosition = drone.turnRight()
         //Then
@@ -86,7 +86,7 @@ final class TrackerDroneTests: XCTestCase {
     //MARK: testMoveForward
     func testMoveForwardPointingNorth() {
         //Given
-        var drone = MockDrone.getDronePointingNorth()
+        var drone = MockDrone.getDrone(direction: .north)
         //When
         drone.currentPosition = drone.moveForward()
         //Then
@@ -95,7 +95,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testMoveForwardPointingEast() {
         //Given
-        var drone = MockDrone.getDronePointingEast()
+        var drone = MockDrone.getDrone(direction: .east)
         //When
         drone.currentPosition = drone.moveForward()
         //Then
@@ -104,7 +104,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testMoveForwardPointingSouth() {
         //Given
-        var drone = MockDrone.getDronePointingSouth()
+        var drone = MockDrone.getDrone(direction: .south)
         //When
         drone.currentPosition = drone.moveForward()
         //Then
@@ -113,18 +113,53 @@ final class TrackerDroneTests: XCTestCase {
     
     func testMoveForwardPointingWest() {
         //Given
-        var drone = MockDrone.getDronePointingWest()
+        var drone = MockDrone.getDrone(direction: .west)
         //When
         drone.currentPosition = drone.moveForward()
         //Then
         XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: -1, y: 0))
     }
-    //TODO: test drone.speed = 2
+    
+    func testSpeed2MoveForwardPointingNorth() {
+        //Given
+        var drone = MockDrone.getDrone(speed: 2, direction: .north)
+        //When
+        drone.currentPosition = drone.moveForward()
+        //Then
+        XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: 0, y: 2))
+    }
+    
+    func testSpeed2MoveForwardPointingEast() {
+        //Given
+        var drone = MockDrone.getDrone(speed: 2, direction: .east)
+        //When
+        drone.currentPosition = drone.moveForward()
+        //Then
+        XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: 2, y: 0))
+    }
+    
+    func testSpeed2MoveForwardPointingSouth() {
+        //Given
+        var drone = MockDrone.getDrone(speed: 2, direction: .south)
+        //When
+        drone.currentPosition = drone.moveForward()
+        //Then
+        XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: 0, y: -2))
+    }
+    
+    func testSpeed2MoveForwardPointingWest() {
+        //Given
+        var drone = MockDrone.getDrone(speed: 2, direction: .west)
+        //When
+        drone.currentPosition = drone.moveForward()
+        //Then
+        XCTAssertEqual(drone.currentPosition.coordinate, CGPoint(x: -2, y: 0))
+    }
     
     //MARK: testExecute
     func testExecuteMovementLeftPointingNorth() {
         //Given
-        let drone = MockDrone.getDronePointingNorth()
+        let drone = MockDrone.getDrone(direction: .north)
         let instruction = MockInstruction.getInstructionTurnLeft()
         //When
         let newDrone = drone.execute(movement: instruction.movement)
@@ -134,7 +169,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testExecuteMovementRightPointingNorth() {
         //Given
-        let drone = MockDrone.getDronePointingNorth()
+        let drone = MockDrone.getDrone(direction: .north)
         let instruction = MockInstruction.getInstructionTurnRight()
         //When
         let newDrone = drone.execute(movement: instruction.movement)
@@ -144,7 +179,7 @@ final class TrackerDroneTests: XCTestCase {
     
     func testExecuteMovementForwardPointingNorth() {
         //Given
-        let drone = MockDrone.getDronePointingNorth()
+        let drone = MockDrone.getDrone(direction: .north)
         let instruction = MockInstruction.getInstructionMoveForward()
         //When
         let newDrone = drone.execute(movement: instruction.movement)

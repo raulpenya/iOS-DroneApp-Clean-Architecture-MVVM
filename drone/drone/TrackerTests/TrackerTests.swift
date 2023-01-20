@@ -12,7 +12,7 @@ final class TrackerTests: XCTestCase {
     //MARK: testIsPositionInBoundaries
     func testIsPositionInBoundariesTRUE() {
         //Given
-        let position = MockPosition.getPositionPointingNorth()
+        let position = MockPosition.getPositionWithDirection(.north)
         let plateau = MockPlateau.getPlateau5x5()
         let tracker = Tracker()
         //When
@@ -35,7 +35,7 @@ final class TrackerTests: XCTestCase {
     //MARK: testExecute
     func testExecuteInstruction() {
         //Given
-        let drone = MockDrone.getDronePointingNorth()
+        let drone = MockDrone.getDrone(direction: .north)
         let instruction = MockInstruction.getInstructionTurnRight()
         let tracker = Tracker()
         //When
