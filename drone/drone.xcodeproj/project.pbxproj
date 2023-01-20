@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0C2F57CB29794BE6005D9AF7 /* MockInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CA29794BE6005D9AF7 /* MockInstructions.swift */; };
 		0C2F57D02979536C005D9AF7 /* MockMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CE2979536C005D9AF7 /* MockMission.swift */; };
+		0C2F57D329796266005D9AF7 /* MissionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57D229796266005D9AF7 /* MissionDataSource.swift */; };
+		0C2F57D629796290005D9AF7 /* MissionDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57D529796290005D9AF7 /* MissionDataRepository.swift */; };
+		0C2F57DF297962DB005D9AF7 /* MissionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57D7297962A8005D9AF7 /* MissionRemoteEntity.swift */; };
+		0C2F57E0297962DB005D9AF7 /* DroneRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57D9297962B3005D9AF7 /* DroneRemoteEntity.swift */; };
+		0C2F57E1297962DB005D9AF7 /* PlateauRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57DB297962C4005D9AF7 /* PlateauRemoteEntity.swift */; };
+		0C2F57E2297962DB005D9AF7 /* InstructionsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57DD297962D6005D9AF7 /* InstructionsRemoteEntity.swift */; };
 		0C3523D5297725E7002462FF /* droneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523D4297725E7002462FF /* droneApp.swift */; };
 		0C3523D7297725E7002462FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523D6297725E7002462FF /* ContentView.swift */; };
 		0C3523D9297725EF002462FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3523D8297725EF002462FF /* Assets.xcassets */; };
@@ -56,6 +62,15 @@
 		0C51B9082978229200D1482E /* TrackerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9072978229200D1482E /* TrackerPosition.swift */; };
 		0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9092978230000D1482E /* TrackerMission.swift */; };
 		0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */; };
+		0C66631E2979A61800700E96 /* MissionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */; };
+		0C6663232979A7DB00700E96 /* MissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663222979A7DB00700E96 /* MissionRepository.swift */; };
+		0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663222979A7DB00700E96 /* MissionRepository.swift */; };
+		0C6663282979A8B300700E96 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663272979A8B300700E96 /* UseCase.swift */; };
+		0C66632A2979AA1700700E96 /* ExecuteMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663292979AA1700700E96 /* ExecuteMission.swift */; };
+		0C66632E2979B0EF00700E96 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632C2979AFF500700E96 /* FileLoader.swift */; };
+		0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */; };
+		0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663312979B52400700E96 /* PositionRemoteEntity.swift */; };
+		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +198,12 @@
 /* Begin PBXFileReference section */
 		0C2F57CA29794BE6005D9AF7 /* MockInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstructions.swift; sourceTree = "<group>"; };
 		0C2F57CE2979536C005D9AF7 /* MockMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMission.swift; sourceTree = "<group>"; };
+		0C2F57D229796266005D9AF7 /* MissionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataSource.swift; sourceTree = "<group>"; };
+		0C2F57D529796290005D9AF7 /* MissionDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRepository.swift; sourceTree = "<group>"; };
+		0C2F57D7297962A8005D9AF7 /* MissionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRemoteEntity.swift; sourceTree = "<group>"; };
+		0C2F57D9297962B3005D9AF7 /* DroneRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneRemoteEntity.swift; sourceTree = "<group>"; };
+		0C2F57DB297962C4005D9AF7 /* PlateauRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateauRemoteEntity.swift; sourceTree = "<group>"; };
+		0C2F57DD297962D6005D9AF7 /* InstructionsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsRemoteEntity.swift; sourceTree = "<group>"; };
 		0C3523D1297725E7002462FF /* drone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3523D4297725E7002462FF /* droneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneApp.swift; sourceTree = "<group>"; };
 		0C3523D6297725E7002462FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,6 +247,14 @@
 		0C51B9072978229200D1482E /* TrackerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPosition.swift; sourceTree = "<group>"; };
 		0C51B9092978230000D1482E /* TrackerMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMission.swift; sourceTree = "<group>"; };
 		0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMissionResult.swift; sourceTree = "<group>"; };
+		0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRemoteDataSource.swift; sourceTree = "<group>"; };
+		0C6663222979A7DB00700E96 /* MissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRepository.swift; sourceTree = "<group>"; };
+		0C6663272979A8B300700E96 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		0C6663292979AA1700700E96 /* ExecuteMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteMission.swift; sourceTree = "<group>"; };
+		0C66632C2979AFF500700E96 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntity.swift; sourceTree = "<group>"; };
+		0C6663312979B52400700E96 /* PositionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionRemoteEntity.swift; sourceTree = "<group>"; };
+		0C6663352979BFB300700E96 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +332,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2F57D129796245005D9AF7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				0C66631F2979A62900700E96 /* Model */,
+				0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		0C2F57D429796270005D9AF7 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F57D129796245005D9AF7 /* Remote */,
+				0C2F57D229796266005D9AF7 /* MissionDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		0C3523C8297725E7002462FF = {
 			isa = PBXGroup;
 			children = (
@@ -376,8 +423,8 @@
 		0C35240429772686002462FF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				0C35245029772D61002462FF /* Plateau */,
-				0C35244C29772C0C002462FF /* Drone */,
+				0C6663262979A8A700700E96 /* Common */,
+				0C6663202979A7A700700E96 /* Mission */,
 				0C35240529772686002462FF /* Domain.h */,
 				0C35240629772686002462FF /* Domain.docc */,
 			);
@@ -395,6 +442,7 @@
 		0C35242729772699002462FF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C66632B2979AFA400700E96 /* Common */,
 				0C51B8F8297819BC00D1482E /* Mission */,
 				0C35242829772699002462FF /* Data.h */,
 				0C35242929772699002462FF /* Data.docc */,
@@ -423,38 +471,6 @@
 				0C3523D6297725E7002462FF /* ContentView.swift */,
 			);
 			path = Mobile;
-			sourceTree = "<group>";
-		};
-		0C35244C29772C0C002462FF /* Drone */ = {
-			isa = PBXGroup;
-			children = (
-				0C35244D29772C17002462FF /* Model */,
-			);
-			path = Drone;
-			sourceTree = "<group>";
-		};
-		0C35244D29772C17002462FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0C35244E29772C4A002462FF /* Drone.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		0C35245029772D61002462FF /* Plateau */ = {
-			isa = PBXGroup;
-			children = (
-				0C35245129772D6F002462FF /* Model */,
-			);
-			path = Plateau;
-			sourceTree = "<group>";
-		};
-		0C35245129772D6F002462FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0C35245229772D92002462FF /* Plateau.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0C36553529787A0C005BCAE6 /* Mocks */ = {
@@ -495,6 +511,8 @@
 		0C51B8F8297819BC00D1482E /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				0C2F57D429796270005D9AF7 /* DataSource */,
+				0C2F57D529796290005D9AF7 /* MissionDataRepository.swift */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -512,6 +530,63 @@
 				0C365533297875F6005BCAE6 /* TrackerErrors.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0C66631F2979A62900700E96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */,
+				0C2F57D7297962A8005D9AF7 /* MissionRemoteEntity.swift */,
+				0C2F57D9297962B3005D9AF7 /* DroneRemoteEntity.swift */,
+				0C6663312979B52400700E96 /* PositionRemoteEntity.swift */,
+				0C2F57DB297962C4005D9AF7 /* PlateauRemoteEntity.swift */,
+				0C2F57DD297962D6005D9AF7 /* InstructionsRemoteEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C6663202979A7A700700E96 /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+				0C6663212979A7B100700E96 /* Model */,
+				0C6663252979A87500700E96 /* UseCase */,
+				0C6663222979A7DB00700E96 /* MissionRepository.swift */,
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		0C6663212979A7B100700E96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C35245229772D92002462FF /* Plateau.swift */,
+				0C35244E29772C4A002462FF /* Drone.swift */,
+				0C6663352979BFB300700E96 /* Mission.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C6663252979A87500700E96 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0C6663292979AA1700700E96 /* ExecuteMission.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		0C6663262979A8A700700E96 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C6663272979A8B300700E96 /* UseCase.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C66632B2979AFA400700E96 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C66632C2979AFF500700E96 /* FileLoader.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -860,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3523D7297725E7002462FF /* ContentView.swift in Sources */,
+				0C6663232979A7DB00700E96 /* MissionRepository.swift in Sources */,
 				0C3523D5297725E7002462FF /* droneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -885,8 +961,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6663282979A8B300700E96 /* UseCase.swift in Sources */,
+				0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */,
+				0C66632A2979AA1700700E96 /* ExecuteMission.swift in Sources */,
 				0C35244F29772C4A002462FF /* Drone.swift in Sources */,
 				0C35240729772687002462FF /* Domain.docc in Sources */,
+				0C6663362979BFB300700E96 /* Mission.swift in Sources */,
 				0C35245329772D92002462FF /* Plateau.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,7 +983,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */,
+				0C2F57E0297962DB005D9AF7 /* DroneRemoteEntity.swift in Sources */,
 				0C35242A29772699002462FF /* Data.docc in Sources */,
+				0C66631E2979A61800700E96 /* MissionRemoteDataSource.swift in Sources */,
+				0C2F57D329796266005D9AF7 /* MissionDataSource.swift in Sources */,
+				0C2F57E1297962DB005D9AF7 /* PlateauRemoteEntity.swift in Sources */,
+				0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */,
+				0C2F57D629796290005D9AF7 /* MissionDataRepository.swift in Sources */,
+				0C66632E2979B0EF00700E96 /* FileLoader.swift in Sources */,
+				0C2F57DF297962DB005D9AF7 /* MissionRemoteEntity.swift in Sources */,
+				0C2F57E2297962DB005D9AF7 /* InstructionsRemoteEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
