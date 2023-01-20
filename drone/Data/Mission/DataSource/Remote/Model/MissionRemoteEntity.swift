@@ -15,7 +15,7 @@ struct MissionRemoteEntity: TrackerMission {
     var instructions: TrackerInstructions
 }
 
-extension MissionRemoteEntity {
+extension TrackerMission {
     func transformToDomain() -> Mission? {
         guard let drone = drone.transformToDomain(), let instructions = instructions.transformToDomain() else { return nil }
         let plateau = plateau.transformToDomain()

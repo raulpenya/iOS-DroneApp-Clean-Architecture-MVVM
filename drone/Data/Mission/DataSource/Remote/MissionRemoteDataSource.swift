@@ -25,13 +25,15 @@ public class MissionRemoteDataSource: MissionDataSource {
         }
     }
     
-    public func getMissionResult(_ mission: Mission) -> AnyPublisher<Bool, Error> {
-        guard let missionRemote = mission.transformToRemote() else {
+    public func getMissionResult(_ mission: Mission) -> AnyPublisher<MissionResult, Error> {
+        guard let mission = mission.transformToRemote() else {
             return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
         }
-        let result = getResultFromTracket(mission: missionRemote)
-//        if result
-        return Empty().eraseToAnyPublisher()
+        let missionResult = getResultFromTracket(mission: mission).transformToRemote()
+        guard let missionResultDomain = missionResult.transformToDomain() else {
+            return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
+        }
+        return Result.Publisher(missionResultDomain).eraseToAnyPublisher()
     }
 }
 

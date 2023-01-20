@@ -11,5 +11,5 @@ import Domain
 
 public protocol MissionDataSource {
     func getMissionInfo() -> AnyPublisher<Mission, Error>
-    func getMissionResult(_ mission: Mission) -> AnyPublisher<Bool, Error>
+    func getMissionResult(_ mission: Mission) -> AnyPublisher<MissionResult, Error>
 }

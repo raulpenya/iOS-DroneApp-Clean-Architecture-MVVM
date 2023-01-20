@@ -9,15 +9,15 @@ import Foundation
 import Combine
 
 public class ExecuteMission: UseCase {
-    typealias T = Bool
-    typealias Q = ExecuteMissionDTO
+    typealias T = MissionResult
+    typealias Q = ExecuteMissionRequestValues
     let repository: MissionRepository
     
     public init(repository: MissionRepository) {
         self.repository = repository
     }
     
-    func execute(_ dto: ExecuteMissionDTO) -> AnyPublisher<Bool, Error> {
+    func execute(_ requestValues: ExecuteMissionRequestValues) -> AnyPublisher<MissionResult, Error> {
         let repository = repository
         return repository.getMissionInfo().flatMap { result in
             print(result)
@@ -26,6 +26,6 @@ public class ExecuteMission: UseCase {
     }
 }
 
-public class ExecuteMissionDTO: DTO {
+public class ExecuteMissionRequestValues: RequestValues {
     public init() {}
 }
