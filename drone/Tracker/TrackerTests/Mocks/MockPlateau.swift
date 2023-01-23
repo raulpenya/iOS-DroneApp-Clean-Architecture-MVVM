@@ -9,6 +9,7 @@ import Foundation
 import Tracker
 
 struct MockPlateau: TrackerPlateau {
+    var letfBottomCorner: CGPoint = .zero
     var topRightCorner: CGPoint
     
     static func getPlateau5x5() -> TrackerPlateau {

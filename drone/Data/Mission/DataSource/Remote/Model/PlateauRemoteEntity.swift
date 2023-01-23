@@ -10,7 +10,7 @@ import Tracker
 import Domain
 
 struct PlateauRemoteEntity: TrackerPlateau {
-    var letfBottomCorner: CGPoint = CGPoint.zero
+    var letfBottomCorner: CGPoint = .zero
     var topRightCorner: CGPoint
 }
 
