@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import Domain
 
 struct MissionResultViewEntity {
-    
+    let initialPosition: String
+    let plateau: String
+    let instructions: [String]
+    let result: String
 }

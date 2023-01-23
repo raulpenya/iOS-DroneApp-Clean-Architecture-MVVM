@@ -5,3 +5,10 @@
   Created by raulbot on 23/1/23.
   
 */
+
+"mission_result_title" = "Mission dashboard";
+"initial_position_text" = "Initial position:";
+"result_text" = "Result:";
+"plateau_text" = "Plateau size:";
+"instructions_text" = "Instructions:";
+"execute_mission_text" = "Execute mission";

@@ -19,26 +19,26 @@ struct MissionResultView: View {
                 HStack {
                     Text(NSLocalizedString("initial_position_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("initial_position_text", comment: ""))
+                    Text(NSLocalizedString("placeholder", comment: ""))
                         .applyInfoLabelStyle()
                 }
                 HStack {
                     Text(NSLocalizedString("plateau_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("plateau_text", comment: ""))
+                    Text(NSLocalizedString("placeholder", comment: ""))
                         .applyInfoLabelStyle()
                 }
                 HStack {
                     Text(NSLocalizedString("instructions_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("instructions_text", comment: ""))
+                    Text(NSLocalizedString("placeholder", comment: ""))
                         .applyInfoLabelStyle()
                 }
                 Text(NSLocalizedString("result", comment: ""))
                     .applyResultLabelStyle()
-                Button(NSLocalizedString("create_button", comment: "")) {
-                    
-                }.buttonStyle(ActionButtonStyle())
+                Button(NSLocalizedString("execute_mission_text", comment: "")) {
+                    viewModel.executeMissionButtonPressed()
+                }.padding(.vertical, 16).buttonStyle(ActionButtonStyle())
             }
         }
     }
