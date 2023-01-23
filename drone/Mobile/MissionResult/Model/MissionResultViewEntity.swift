@@ -14,3 +14,9 @@ struct MissionResultViewEntity {
     let instructions: [String]
     let result: String
 }
+
+extension MissionResult {
+    func transformToUI() {
+        
+    }
+}

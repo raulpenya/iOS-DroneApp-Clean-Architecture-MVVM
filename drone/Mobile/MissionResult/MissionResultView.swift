@@ -19,22 +19,22 @@ struct MissionResultView: View {
                 HStack {
                     Text(NSLocalizedString("initial_position_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("placeholder", comment: ""))
+                    Text(viewModel.getInitialPositionText())
                         .applyInfoLabelStyle()
                 }
                 HStack {
                     Text(NSLocalizedString("plateau_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("placeholder", comment: ""))
+                    Text(viewModel.getPlateauText())
                         .applyInfoLabelStyle()
                 }
                 HStack {
                     Text(NSLocalizedString("instructions_text", comment: ""))
                         .applySubtitleLabelStyle()
-                    Text(NSLocalizedString("placeholder", comment: ""))
+                    Text(viewModel.getInstructionsText())
                         .applyInfoLabelStyle()
                 }
-                Text(NSLocalizedString("result", comment: ""))
+                Text(viewModel.getResultText())
                     .applyResultLabelStyle()
                 Button(NSLocalizedString("execute_mission_text", comment: "")) {
                     viewModel.executeMissionButtonPressed()

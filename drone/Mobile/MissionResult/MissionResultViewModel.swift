@@ -21,6 +21,26 @@ class MissionResultViewModel: ObservableObject {
     func executeMissionButtonPressed() {
         executeMission()
     }
+    
+    func getInitialPositionText() -> String {
+        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        return result.initialPosition
+    }
+    
+    func getPlateauText() -> String {
+        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        return result.plateau
+    }
+    
+    func getInstructionsText() -> String {
+        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        return result.instructions.joined(separator: "")
+    }
+    
+    func getResultText() -> String {
+        guard let result = missionResult else { return "" }
+        return result.result
+    }
 }
 
 extension MissionResultViewModel {
