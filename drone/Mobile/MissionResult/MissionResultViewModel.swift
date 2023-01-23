@@ -9,9 +9,13 @@ import Foundation
 import Domain
 
 class MissionResultViewModel: ObservableObject {
+    
+    @Published var missionResult: MissionResultViewEntity?
     let executeMissionUseCase: ExecuteMission
     
     init(executeMissionUseCase: ExecuteMission) {
         self.executeMissionUseCase = executeMissionUseCase
     }
+    
+    
 }
