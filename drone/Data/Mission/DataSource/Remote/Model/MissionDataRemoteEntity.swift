@@ -24,9 +24,9 @@ struct MissionDataRemoteEntity : Decodable {
 extension MissionDataRemoteEntity {
     func transformMissionRemoteEntity() -> TrackerMission? {
         guard let roverPosition = transformToRoverPosition(),
-                let plateau = transformToPlateau() else { return nil }
+                let plateau = transformToPlateau(),
+                let instructions = transformToInstructions() else { return nil }
         let drone = DroneRemoteEntity(currentPosition: roverPosition)
-        let instructions = transformToInstructions()
         return MissionRemoteEntity(drone: drone, plateau: plateau, instructions: instructions)
     }
     
@@ -40,8 +40,10 @@ extension MissionDataRemoteEntity {
         return PlateauRemoteEntity(topRightCorner: CGPoint(x: x, y: y))
     }
     
-    func transformToInstructions() -> TrackerInstructions {
-        let instructions = Array(movements).compactMap { String($0) }.compactMap { TrackerMovement.createMovement($0) }.compactMap { InstructionRemoteEntity(movement: $0) }
+    func transformToInstructions() -> TrackerInstructions? {
+        let arrayMovements = Array(movements).compactMap { String($0) }
+        let instructions = arrayMovements.compactMap { TrackerMovement.createMovement($0) }.compactMap { InstructionRemoteEntity(movement: $0) }
+        guard arrayMovements.count == instructions.count else { return nil }
         return InstructionsRemoteEntity(instructions: instructions)
     }
 }
