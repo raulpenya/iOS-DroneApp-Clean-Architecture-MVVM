@@ -8,11 +8,12 @@
 import Foundation
 
 public protocol TrackerPlateau {
+    var letfBottomCorner: CGPoint { get set }
     var topRightCorner: CGPoint { get set }
 }
 
 extension TrackerPlateau {
     func isPositionWithinTheBoundaries(_ point: CGPoint) -> Bool {
-        return point.x >= 0 && point.y >= 0 && point.x <= topRightCorner.x && point.y <= topRightCorner.y
+        return point.x >= letfBottomCorner.x && point.y >= letfBottomCorner.y && point.x <= topRightCorner.x && point.y <= topRightCorner.y
     }
 }
