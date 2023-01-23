@@ -14,6 +14,8 @@ public class MissionRemoteDataSource: MissionDataSource {
     
     static let fileName = "input"
     
+    public init() {}
+    
     public func getMissionInfo() -> AnyPublisher<Mission, Error> {
         do {
             guard let mission = try getInfoFromFile().transformToMissionRemoteEntity()?.transformToDomain() else {

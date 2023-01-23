@@ -11,7 +11,11 @@ import Domain
 
 public struct MissionDataRepository: MissionRepository {
     
-    private let remoteDataSource: MissionDataSource
+    let remoteDataSource: MissionDataSource
+    
+    public init(remoteDataSource: MissionDataSource) {
+        self.remoteDataSource = remoteDataSource
+    }
     
     public func getMissionInfo() -> AnyPublisher<Mission, Error> {
         return remoteDataSource.getMissionInfo()

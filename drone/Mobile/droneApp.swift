@@ -11,7 +11,7 @@ import SwiftUI
 struct droneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MissionResultAssemblerInjection().resolve()
         }
     }
 }
