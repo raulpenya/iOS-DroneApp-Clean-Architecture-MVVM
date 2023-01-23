@@ -67,6 +67,7 @@
 		0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */; };
 		0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663312979B52400700E96 /* PositionRemoteEntity.swift */; };
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
+		0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */; };
 		0CC13A2C297AFF8C006F97B8 /* MissionResultRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */; };
 		0CC13A2E297B018D006F97B8 /* MissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2D297B018D006F97B8 /* MissionResult.swift */; };
 		0CC13A30297B1119006F97B8 /* MissionDataRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2F297B1119006F97B8 /* MissionDataRemoteEntityTests.swift */; };
@@ -263,6 +264,7 @@
 		0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663312979B52400700E96 /* PositionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663352979BFB300700E96 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionDataRemoteEntity.swift; sourceTree = "<group>"; };
 		0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultRemoteEntity.swift; sourceTree = "<group>"; };
 		0CC13A2D297B018D006F97B8 /* MissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResult.swift; sourceTree = "<group>"; };
 		0CC13A2F297B1119006F97B8 /* MissionDataRemoteEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntityTests.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 		0C3524352977269B002462FF /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				0CA7B875297E952200F5F75E /* Mocks */,
 				0CC13A2F297B1119006F97B8 /* MissionDataRemoteEntityTests.swift */,
 				0CC13A31297B1153006F97B8 /* MissionRemoteEntityTests.swift */,
 				0CC13A33297B1160006F97B8 /* DroneRemoteEntityTests.swift */,
@@ -614,6 +617,14 @@
 				0C66632C2979AFF500700E96 /* FileLoader.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0CA7B875297E952200F5F75E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1038,6 +1049,7 @@
 				0CC13A38297B1183006F97B8 /* PlateauRemoteEntityTests.swift in Sources */,
 				0CC13A3C297B11C9006F97B8 /* InstructionRemoteEntityTests.swift in Sources */,
 				0CC13A30297B1119006F97B8 /* MissionDataRemoteEntityTests.swift in Sources */,
+				0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */,
 				0CC13A3E297B127F006F97B8 /* MissionDataRepositoryTests.swift in Sources */,
 				0CC13A3A297B11AD006F97B8 /* InstructionsRemoteEntityTests.swift in Sources */,
 				0CC13A32297B1153006F97B8 /* MissionRemoteEntityTests.swift in Sources */,
