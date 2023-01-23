@@ -1,5 +1,5 @@
 //
-//  ActionButton.swift
+//  ActionButtonStyle.swift
 //  drone
 //
 //  Created by raulbot on 23/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActionButton: ButtonStyle {
+struct ActionButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.horizontal, 10)

@@ -63,11 +63,8 @@
 		0C56032E297EE9270019F223 /* MissionResultViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56032D297EE9270019F223 /* MissionResultViewEntity.swift */; };
 		0C560330297EE9440019F223 /* MissionResultAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56032F297EE9440019F223 /* MissionResultAssembler.swift */; };
 		0C560333297EF0C50019F223 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C560332297EF0C50019F223 /* Localizable.strings */; };
-		0C560336297EF4B00019F223 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560335297EF4B00019F223 /* ActionButton.swift */; };
-		0C560338297EF58D0019F223 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560337297EF58D0019F223 /* TitleLabel.swift */; };
-		0C56033A297EF6BC0019F223 /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560339297EF6BC0019F223 /* SubtitleLabel.swift */; };
-		0C56033C297EF7970019F223 /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56033B297EF7970019F223 /* InfoLabel.swift */; };
-		0C56033E297EF8320019F223 /* ResultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56033D297EF8320019F223 /* ResultLabel.swift */; };
+		0C560336297EF4B00019F223 /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560335297EF4B00019F223 /* ActionButtonStyle.swift */; };
+		0C560338297EF58D0019F223 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560337297EF58D0019F223 /* Text+Extension.swift */; };
 		0C66631E2979A61800700E96 /* MissionRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */; };
 		0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663222979A7DB00700E96 /* MissionRepository.swift */; };
 		0C6663282979A8B300700E96 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663272979A8B300700E96 /* UseCase.swift */; };
@@ -273,11 +270,8 @@
 		0C56032D297EE9270019F223 /* MissionResultViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewEntity.swift; sourceTree = "<group>"; };
 		0C56032F297EE9440019F223 /* MissionResultAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultAssembler.swift; sourceTree = "<group>"; };
 		0C560332297EF0C50019F223 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		0C560335297EF4B00019F223 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		0C560337297EF58D0019F223 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		0C560339297EF6BC0019F223 /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
-		0C56033B297EF7970019F223 /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
-		0C56033D297EF8320019F223 /* ResultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLabel.swift; sourceTree = "<group>"; };
+		0C560335297EF4B00019F223 /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		0C560337297EF58D0019F223 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		0C66631D2979A61800700E96 /* MissionRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRemoteDataSource.swift; sourceTree = "<group>"; };
 		0C6663222979A7DB00700E96 /* MissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRepository.swift; sourceTree = "<group>"; };
 		0C6663272979A8B300700E96 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
@@ -623,11 +617,8 @@
 		0C560334297EF49B0019F223 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C560335297EF4B00019F223 /* ActionButton.swift */,
-				0C560337297EF58D0019F223 /* TitleLabel.swift */,
-				0C560339297EF6BC0019F223 /* SubtitleLabel.swift */,
-				0C56033B297EF7970019F223 /* InfoLabel.swift */,
-				0C56033D297EF8320019F223 /* ResultLabel.swift */,
+				0C560337297EF58D0019F223 /* Text+Extension.swift */,
+				0C560335297EF4B00019F223 /* ActionButtonStyle.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -1055,16 +1046,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C56033C297EF7970019F223 /* InfoLabel.swift in Sources */,
 				0C3523D5297725E7002462FF /* droneApp.swift in Sources */,
 				0C560330297EE9440019F223 /* MissionResultAssembler.swift in Sources */,
-				0C56033A297EF6BC0019F223 /* SubtitleLabel.swift in Sources */,
 				0C56032E297EE9270019F223 /* MissionResultViewEntity.swift in Sources */,
 				0C56032C297EE8F60019F223 /* MissionResultView.swift in Sources */,
-				0C560338297EF58D0019F223 /* TitleLabel.swift in Sources */,
-				0C56033E297EF8320019F223 /* ResultLabel.swift in Sources */,
+				0C560338297EF58D0019F223 /* Text+Extension.swift in Sources */,
 				0C56032A297EE8B00019F223 /* MissionResultViewModel.swift in Sources */,
-				0C560336297EF4B00019F223 /* ActionButton.swift in Sources */,
+				0C560336297EF4B00019F223 /* ActionButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
