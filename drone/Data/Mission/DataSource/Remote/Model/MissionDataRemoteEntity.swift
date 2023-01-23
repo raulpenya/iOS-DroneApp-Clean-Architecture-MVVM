@@ -22,7 +22,7 @@ struct MissionDataRemoteEntity : Decodable {
     var movements: String
 }
 extension MissionDataRemoteEntity {
-    func transformMissionRemoteEntity() -> TrackerMission? {
+    func transformToMissionRemoteEntity() -> TrackerMission? {
         guard let roverPosition = transformToRoverPosition(),
                 let plateau = transformToPlateau(),
                 let instructions = transformToInstructions() else { return nil }

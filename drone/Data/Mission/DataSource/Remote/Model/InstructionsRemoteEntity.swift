@@ -40,7 +40,6 @@ extension TrackerMovement {
         case "M":
             newMovement = .forward
         default:
-            assert(false, "TrackerMovement :: createMovement :: wrong instruction")
             break
         }
         return newMovement
