@@ -17,7 +17,7 @@ public class ExecuteMission: UseCase {
         self.repository = repository
     }
     
-    func execute(_ requestValues: ExecuteMissionRequestValues) -> AnyPublisher<MissionResult, Error> {
+    public func execute(_ requestValues: ExecuteMissionRequestValues) -> AnyPublisher<MissionResult, Error> {
         let repository = repository
         return repository.getMissionInfo().flatMap { result in
             print(result)

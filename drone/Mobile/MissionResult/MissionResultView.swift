@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MissionResultView: View {
     
-    @ObservedObject var notesViewModel: MissionResultViewModel
+    @ObservedObject var viewModel: MissionResultViewModel
     
     var body: some View {
         NavigationView {

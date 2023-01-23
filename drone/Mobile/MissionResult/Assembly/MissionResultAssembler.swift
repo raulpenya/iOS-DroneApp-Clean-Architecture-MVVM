@@ -15,7 +15,7 @@ protocol MissionResultAssembler {
 
 extension MissionResultAssembler {
     func resolve() -> MissionResultView {
-        return MissionResultView(notesViewModel: resolve())
+        return MissionResultView(viewModel: resolve())
     }
     
     func resolve() -> MissionResultViewModel {
