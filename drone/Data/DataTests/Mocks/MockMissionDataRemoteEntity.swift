@@ -41,7 +41,7 @@ struct MockMissionDataRemoteEntity {
         return MissionDataRemoteEntity(topRightCorner: topRightCorner, roverPosition: roverPosition, roverDirection: roverDirection, movements: movements)
     }
     
-    static func getMissionDataRoverDirectionLOWERCASE() -> MissionDataRemoteEntity {
+    static func getMissionDataMovementsLOWERCASE() -> MissionDataRemoteEntity {
         let topRightCorner: Dictionary<String, Double> =  [ "x" : 5, "y" : 5 ]
         let roverPosition: Dictionary<String, Double> = [ "x" : 1, "y" : 2 ]
         let roverDirection = "N"

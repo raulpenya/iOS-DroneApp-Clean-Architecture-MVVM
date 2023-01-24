@@ -99,6 +99,15 @@ final class MissionDataRemoteEntityTests: XCTestCase {
         XCTAssertNotNil(instructions)
     }
     
+    func testsTransformToInstructionsLowercaseSUCCESS() {
+        //Given
+        let missionData = MockMissionDataRemoteEntity.getMissionDataMovementsLOWERCASE()
+        //When
+        let instructions = missionData.transformToInstructions()
+        //Then
+        XCTAssertNotNil(instructions)
+    }
+    
     func testsTransformToInstructionsERROR() {
         //Given
         let missionData = MockMissionDataRemoteEntity.getMissionDataMovementsERROR()
