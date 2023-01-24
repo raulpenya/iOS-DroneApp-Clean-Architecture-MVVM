@@ -8,6 +8,7 @@
 import Foundation
 @testable import Data
 @testable import Tracker
+@testable import Domain
 
 struct MockPlateauRemoteEntity {
     static func getPlateau() -> TrackerPlateau {
@@ -28,5 +29,11 @@ struct MockPlateauRemoteEntity {
     
     static func getPlateauTopRightCornerERROR_Y() -> TrackerPlateau {
         return PlateauRemoteEntity(topRightCorner: CGPoint(x: -5, y: 5))
+    }
+}
+
+struct MockPlateau {
+    static func getPlateau() -> Plateau {
+        return Plateau(topRightCorner: CGPoint(x: 5, y: 5))
     }
 }
