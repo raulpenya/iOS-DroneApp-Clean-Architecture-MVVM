@@ -12,6 +12,7 @@ import Combine
 class MissionResultViewModel: ObservableObject {
     
     @Published var missionResult: MissionResultViewEntity?
+    @Published var errorDescription: ErrorDescription?
     let executeMissionUseCase: ExecuteMission
     
     init(executeMissionUseCase: ExecuteMission) {
@@ -34,12 +35,17 @@ class MissionResultViewModel: ObservableObject {
     
     func getInstructionsText() -> String {
         guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
-        return result.instructions.joined(separator: "")
+        return result.instructions
     }
     
     func getResultText() -> String {
-        guard let result = missionResult else { return "" }
-        return result.result
+        var text = ""
+        if let result = missionResult {
+            text = result.result
+        } else if let errorDescription = errorDescription {
+            text = errorDescription.text
+        }
+        return text
     }
 }
 
@@ -49,15 +55,15 @@ extension MissionResultViewModel {
             switch completion {
             case .failure(let error):
                 print("Error \(error)")
-//                let error = ErrorDescription(name: error.localizedDescription)
-//                self?.errorDescription = error
-                print(error)
+                self?.missionResult = nil
+                let error = ErrorDescription(text: error.localizedDescription)
+                self?.errorDescription = error
             case .finished:
                 print("Publisher is finished")
             }
         } receiveValue: { [weak self] result in
             print(result)
-//            self?.notes = notes.compactMap { $0.transformToUI() }
+            self?.missionResult = result.transformToUI()
         }.cancel()
     }
 }

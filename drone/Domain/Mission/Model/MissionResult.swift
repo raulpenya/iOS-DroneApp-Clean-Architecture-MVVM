@@ -8,9 +8,9 @@
 import Foundation
 
 public struct MissionResult {
-    let mission: Mission
-    let lastPosition: Position
-    let error: Error?
+    public let mission: Mission
+    public let lastPosition: Position
+    public let error: Error?
     
     public init(mission: Mission, lastPosition: Position, error: Error?) {
         self.mission = mission
