@@ -8,13 +8,6 @@
 import Foundation
 import Tracker
 
-//{
-//"topRightCorner": { "x" : 5, "y" : 5 },
-//"roverPosition": {"x" : 1, "y" : 2 },
-//"roverDirection": "N",
-//"movements" : "LMLMLMLMM"
-//}
-
 struct MissionDataRemoteEntity : Decodable {
     var topRightCorner: Dictionary<String, Double>
     var roverPosition: Dictionary<String, Double>
