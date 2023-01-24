@@ -86,6 +86,7 @@
 		0CC13A3C297B11C9006F97B8 /* InstructionRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3B297B11C9006F97B8 /* InstructionRemoteEntityTests.swift */; };
 		0CC13A3E297B127F006F97B8 /* MissionDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3D297B127F006F97B8 /* MissionDataRepositoryTests.swift */; };
 		0CC13A40297B1418006F97B8 /* ExecuteMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3F297B1418006F97B8 /* ExecuteMissionTests.swift */; };
+		0CD5D7FC297FF84600EBEDE0 /* MockMissionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FB297FF84600EBEDE0 /* MockMissionRemoteEntity.swift */; };
 		0CFE552F297AA63C00DBDF45 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE552E297AA63C00DBDF45 /* Instructions.swift */; };
 		0CFE5531297AA66400DBDF45 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5530297AA66400DBDF45 /* Instruction.swift */; };
 		0CFE5533297AA6A900DBDF45 /* InstructionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */; };
@@ -294,6 +295,7 @@
 		0CC13A3B297B11C9006F97B8 /* InstructionRemoteEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRemoteEntityTests.swift; sourceTree = "<group>"; };
 		0CC13A3D297B127F006F97B8 /* MissionDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRepositoryTests.swift; sourceTree = "<group>"; };
 		0CC13A3F297B1418006F97B8 /* ExecuteMissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteMissionTests.swift; sourceTree = "<group>"; };
+		0CD5D7FB297FF84600EBEDE0 /* MockMissionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionRemoteEntity.swift; sourceTree = "<group>"; };
 		0CFE552E297AA63C00DBDF45 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		0CFE5530297AA66400DBDF45 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRemoteEntity.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */,
+				0CD5D7FB297FF84600EBEDE0 /* MockMissionRemoteEntity.swift */,
 				0CFEBFC2297EB18100D2FB00 /* MockDroneRemoteEntity.swift */,
 				0CFEBFC0297EAC8500D2FB00 /* MockPositionRemoteEntity.swift */,
 				0CFEBFC4297EB1F200D2FB00 /* MockPlateauRemoteEntity.swift */,
@@ -1143,6 +1146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD5D7FC297FF84600EBEDE0 /* MockMissionRemoteEntity.swift in Sources */,
 				0CFEBFC3297EB18100D2FB00 /* MockDroneRemoteEntity.swift in Sources */,
 				0CC13A34297B1160006F97B8 /* DroneRemoteEntityTests.swift in Sources */,
 				0CC13A38297B1183006F97B8 /* PlateauRemoteEntityTests.swift in Sources */,

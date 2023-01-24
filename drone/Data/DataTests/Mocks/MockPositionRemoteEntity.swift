@@ -7,9 +7,10 @@
 
 import Foundation
 @testable import Data
+@testable import Tracker
 
 struct MockPositionRemoteEntity {
-    static func getPosition() -> PositionRemoteEntity {
+    static func getPosition() -> TrackerPosition {
         return PositionRemoteEntity(direction: .north, coordinate: .zero)
     }
 }
