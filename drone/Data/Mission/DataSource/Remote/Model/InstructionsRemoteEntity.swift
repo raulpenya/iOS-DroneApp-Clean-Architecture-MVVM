@@ -32,7 +32,7 @@ extension Instructions {
 extension TrackerMovement {
     static func createMovement(_ movement: String) -> TrackerMovement? {
         var newMovement: TrackerMovement? = nil
-        switch movement {
+        switch movement.uppercased() {
         case "R":
             newMovement = .right
         case "L":
