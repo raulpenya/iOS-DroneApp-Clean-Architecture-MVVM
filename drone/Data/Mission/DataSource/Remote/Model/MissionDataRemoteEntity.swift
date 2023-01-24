@@ -25,7 +25,7 @@ extension MissionDataRemoteEntity {
     }
     
     func transformToRoverPosition() -> TrackerPosition? {
-        guard let x = roverPosition["x"], let y = roverPosition["y"], let direction = TrackerDirection.getDirectionWithString(roverDirection) else { return nil }
+        guard let x = roverPosition["x"], let y = roverPosition["y"], let direction = TrackerDirection.createDirection(with: roverDirection) else { return nil }
         return PositionRemoteEntity(direction: direction, coordinate: CGPoint(x: x, y: y))
     }
     
@@ -36,7 +36,7 @@ extension MissionDataRemoteEntity {
     
     func transformToInstructions() -> TrackerInstructions? {
         let arrayMovements = Array(movements).compactMap { String($0) }
-        let instructions = arrayMovements.compactMap { TrackerMovement.createMovement($0) }.compactMap { InstructionRemoteEntity(movement: $0) }
+        let instructions = arrayMovements.compactMap { TrackerMovement.createMovement(with: $0) }.compactMap { InstructionRemoteEntity(movement: $0) }
         guard arrayMovements.count == instructions.count else { return nil }
         return InstructionsRemoteEntity(instructions: instructions)
     }

@@ -20,4 +20,15 @@ final class DroneRemoteEntityTests: XCTestCase {
         XCTAssertEqual(drone.currentPosition.direction.rawValue, droneDomain?.currentPosition.direction.rawValue)
         XCTAssertEqual(drone.currentPosition.coordinate, droneDomain?.currentPosition.coordinate)
     }
+    
+    func testTransformToRemote() {
+        //Given
+        let drone = MockDrone.getDrone()
+        //Then
+        let droneRemote = drone.transformToRemote()
+        //When
+        XCTAssertNotNil(droneRemote)
+        XCTAssertEqual(drone.currentPosition.direction.rawValue, droneRemote?.currentPosition.direction.rawValue)
+        XCTAssertEqual(drone.currentPosition.coordinate, droneRemote?.currentPosition.coordinate)
+    }
 }

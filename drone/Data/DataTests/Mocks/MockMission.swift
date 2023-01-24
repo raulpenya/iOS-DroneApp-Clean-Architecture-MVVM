@@ -8,7 +8,7 @@
 import Foundation
 @testable import Data
 @testable import Tracker
-@testable import Domain
+import Domain
 
 struct MockMissionRemoteEntity {
     static func getMission() -> TrackerMission {
@@ -18,6 +18,6 @@ struct MockMissionRemoteEntity {
 
 struct MockMission {
     static func getMission() -> Mission {
-        return Mission(drone: MockDrone.getDrone(), plateau: MockPlateau.getPlateau(), instructions: <#T##Instructions#>)
+        return Mission(drone: MockDrone.getDrone(), plateau: MockPlateau.getPlateau(), instructions: MockInstructions.getInstructions())
     }
 }

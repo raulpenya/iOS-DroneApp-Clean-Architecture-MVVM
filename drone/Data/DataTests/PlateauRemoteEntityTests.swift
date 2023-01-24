@@ -6,7 +6,25 @@
 //
 
 import XCTest
+@testable import Data
+@testable import Tracker
 
 final class PlateauRemoteEntityTests: XCTestCase {
-
+    func testTransformToDomain() {
+        //Given
+        let plateau = MockPlateauRemoteEntity.getPlateau()
+        //Then
+        let plateauDomain = plateau.transformToDomain()
+        //When
+        XCTAssertEqual(plateau.topRightCorner, plateauDomain.topRightCorner)
+    }
+    
+    func testTransformToRemote() {
+        //Given
+        let plateau = MockPlateau.getPlateau()
+        //Then
+        let plateauRemote = plateau.transformToRemote()
+        //When
+        XCTAssertEqual(plateau.topRightCorner, plateauRemote.topRightCorner)
+    }
 }

@@ -28,20 +28,3 @@ extension Instructions {
         return InstructionsRemoteEntity(instructions: instructionsRemote)
     }
 }
-
-extension TrackerMovement {
-    static func createMovement(_ movement: String) -> TrackerMovement? {
-        var newMovement: TrackerMovement? = nil
-        switch movement.uppercased() {
-        case "R":
-            newMovement = .right
-        case "L":
-            newMovement = .left
-        case "M":
-            newMovement = .forward
-        default:
-            break
-        }
-        return newMovement
-    }
-}

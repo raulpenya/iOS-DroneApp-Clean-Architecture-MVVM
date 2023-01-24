@@ -29,7 +29,7 @@ extension Position {
 }
 
 extension TrackerDirection {
-    static func getDirectionWithString(_ string: String) -> TrackerDirection? {
+    static func createDirection(with string: String) -> TrackerDirection? {
         var direction: TrackerDirection?
         switch string.uppercased() {
         case "N":
