@@ -19,7 +19,7 @@ public class MissionRemoteDataSource: MissionDataSource {
     public func getMissionInfo() -> AnyPublisher<Mission, Error> {
         do {
             guard let mission = try getInfoFromFile().transformToMissionRemoteEntity()?.transformToDomain() else {
-                return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
+                return Fail(error: RepositoryErrors.jsonError as Error).eraseToAnyPublisher()
             }
             return Result.Publisher(mission).eraseToAnyPublisher()
         } catch {
@@ -29,11 +29,11 @@ public class MissionRemoteDataSource: MissionDataSource {
     
     public func getMissionResult(_ mission: Mission) -> AnyPublisher<MissionResult, Error> {
         guard let mission = mission.transformToRemote() else {
-            return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
+            return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
         let missionResult = getResultFromTracket(mission: mission).transformToRemote()
         guard let missionResultDomain = missionResult.transformToDomain() else {
-            return Fail(error:  NSError(domain: "NoteRepository.getNotes.decode", code: 400)).eraseToAnyPublisher()
+            return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
         return Result.Publisher(missionResultDomain).eraseToAnyPublisher()
     }
@@ -42,7 +42,7 @@ public class MissionRemoteDataSource: MissionDataSource {
 extension MissionRemoteDataSource {
     func getInfoFromFile(_ filename: String = MissionRemoteDataSource.fileName, fileLoader: FileLoader = FileLoader()) throws -> MissionDataRemoteEntity {
         guard let data = try fileLoader.loadJson(filename: MissionRemoteDataSource.fileName) else {
-            throw NSError(domain: "NoteRepository.getNotes.decode", code: 400)
+            throw RepositoryErrors.jsonError as Error
         }
         return try JSONDecoder().decode(MissionDataRemoteEntity.self, from: data)
     }
