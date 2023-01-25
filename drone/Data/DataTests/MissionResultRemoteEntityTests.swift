@@ -8,8 +8,9 @@
 import XCTest
 @testable import Data
 @testable import Tracker
+import Domain
 
-final class MissionResultRemoteEntityTests: XCTestCase {
+final class TrackerMissionResultTests: XCTestCase {
     func testTransformToDomain() {
         //Given
         let result = MockMissionResultRemoteEntity.getMissionResult()

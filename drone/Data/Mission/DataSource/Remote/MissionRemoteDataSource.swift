@@ -31,8 +31,7 @@ public class MissionRemoteDataSource: MissionDataSource {
         guard let mission = mission.transformToRemote() else {
             return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
-        let missionResult = getResultFromTracket(mission: mission).transformToRemote()
-        guard let missionResultDomain = missionResult.transformToDomain() else {
+        guard let missionResultDomain = getResultFromTracket(mission: mission).transformToDomain() else {
             return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
         return Result.Publisher(missionResultDomain).eraseToAnyPublisher()

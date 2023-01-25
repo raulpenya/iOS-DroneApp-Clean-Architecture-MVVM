@@ -92,8 +92,8 @@
 		0C8FBB8729814323002E38ED /* MissionResultRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB8629814323002E38ED /* MissionResultRemoteEntityTests.swift */; };
 		0C92A8A82980529F0012228F /* MockMissionRemotelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A72980529F0012228F /* MockMissionRemotelDataSource.swift */; };
 		0C92A8AA298053900012228F /* MockMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A92980538F0012228F /* MockMissionResult.swift */; };
+		0C945BC329814F21009DC722 /* TrackerMissionResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C945BC229814F21009DC722 /* TrackerMissionResult+Extensions.swift */; };
 		0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */; };
-		0CC13A2C297AFF8C006F97B8 /* MissionResultRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */; };
 		0CC13A2E297B018D006F97B8 /* MissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2D297B018D006F97B8 /* MissionResult.swift */; };
 		0CC13A30297B1119006F97B8 /* MissionDataRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2F297B1119006F97B8 /* MissionDataRemoteEntityTests.swift */; };
 		0CC13A32297B1153006F97B8 /* MissionRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A31297B1153006F97B8 /* MissionRemoteEntityTests.swift */; };
@@ -313,8 +313,8 @@
 		0C92A8A72980529F0012228F /* MockMissionRemotelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionRemotelDataSource.swift; sourceTree = "<group>"; };
 		0C92A8A92980538F0012228F /* MockMissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionResult.swift; sourceTree = "<group>"; };
 		0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrors.swift; sourceTree = "<group>"; };
+		0C945BC229814F21009DC722 /* TrackerMissionResult+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrackerMissionResult+Extensions.swift"; sourceTree = "<group>"; };
 		0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionDataRemoteEntity.swift; sourceTree = "<group>"; };
-		0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultRemoteEntity.swift; sourceTree = "<group>"; };
 		0CC13A2D297B018D006F97B8 /* MissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResult.swift; sourceTree = "<group>"; };
 		0CC13A2F297B1119006F97B8 /* MissionDataRemoteEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntityTests.swift; sourceTree = "<group>"; };
 		0CC13A31297B1153006F97B8 /* MissionRemoteEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRemoteEntityTests.swift; sourceTree = "<group>"; };
@@ -694,7 +694,7 @@
 				0C2F57DB297962C4005D9AF7 /* PlateauRemoteEntity.swift */,
 				0C2F57DD297962D6005D9AF7 /* InstructionsRemoteEntity.swift */,
 				0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */,
-				0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */,
+				0C945BC229814F21009DC722 /* TrackerMissionResult+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1210,9 +1210,9 @@
 				0C2F57E1297962DB005D9AF7 /* PlateauRemoteEntity.swift in Sources */,
 				0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */,
 				0CFE5533297AA6A900DBDF45 /* InstructionRemoteEntity.swift in Sources */,
+				0C945BC329814F21009DC722 /* TrackerMissionResult+Extensions.swift in Sources */,
 				0C2F57D629796290005D9AF7 /* MissionDataRepository.swift in Sources */,
 				0C66632E2979B0EF00700E96 /* FileLoader.swift in Sources */,
-				0CC13A2C297AFF8C006F97B8 /* MissionResultRemoteEntity.swift in Sources */,
 				0C2F57DF297962DB005D9AF7 /* MissionRemoteEntity.swift in Sources */,
 				0C2F57E2297962DB005D9AF7 /* InstructionsRemoteEntity.swift in Sources */,
 			);

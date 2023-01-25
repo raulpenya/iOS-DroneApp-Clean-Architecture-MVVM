@@ -10,9 +10,12 @@ import Foundation
 @testable import Tracker
 @testable import Domain
 
-struct MockMissionResultRemoteEntity {
+struct MockMissionResultRemoteEntity: TrackerMissionResult {
+    var mission: TrackerMission
+    var result: TrackerResult
+    
     static func getMissionResult() -> TrackerMissionResult {
-        return MissionResultRemoteEntity(mission: MockMissionRemoteEntity.getMission(), result: MockTrackerResult.getTrackerResult())
+        return MockMissionResultRemoteEntity(mission: MockMissionRemoteEntity.getMission(), result: MockTrackerResult.getTrackerResult())
     }
 }
 
