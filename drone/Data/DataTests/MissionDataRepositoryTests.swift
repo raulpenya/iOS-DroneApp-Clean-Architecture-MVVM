@@ -13,7 +13,7 @@ import Domain
 final class MissionDataRepositoryTests: XCTestCase {
     func testGetMissionInfoSUCCESS() {
         // Given
-        let dataSource = MockMissionRemotelDataSource()
+        let dataSource = MockMissionDataSource()
         dataSource.response = .success
         let missionRepository = MissionDataRepository(remoteDataSource: dataSource)
         let expectation = expectation(description: "testGetMissionInfoSUCCESS")
@@ -36,7 +36,7 @@ final class MissionDataRepositoryTests: XCTestCase {
 
     func testGetMissionInfoERROR() {
         // Given
-        let dataSource = MockMissionRemotelDataSource()
+        let dataSource = MockMissionDataSource()
         dataSource.response = .error
         let missionRepository = MissionDataRepository(remoteDataSource: dataSource)
         let expectation = expectation(description: "test_GetMissionInfo_ERROR")
@@ -60,7 +60,7 @@ final class MissionDataRepositoryTests: XCTestCase {
     func testGetMissionResultSUCCESS() {
         // Given
         let mission = MockMission.getMission()
-        let dataSource = MockMissionRemotelDataSource()
+        let dataSource = MockMissionDataSource()
         dataSource.response = .success
         let missionRepository = MissionDataRepository(remoteDataSource: dataSource)
         let expectation = expectation(description: "test_GetMissionResult_SUCCESS")
@@ -84,7 +84,7 @@ final class MissionDataRepositoryTests: XCTestCase {
     func testGetMissionResultERROR() {
         // Given
         let mission = MockMission.getMission()
-        let dataSource = MockMissionRemotelDataSource()
+        let dataSource = MockMissionDataSource()
         dataSource.response = .error
         let missionRepository = MissionDataRepository(remoteDataSource: dataSource)
         let expectation = expectation(description: "test_GetMissionResult_ERROR")

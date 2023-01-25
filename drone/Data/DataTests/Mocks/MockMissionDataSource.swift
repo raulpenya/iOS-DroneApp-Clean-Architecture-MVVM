@@ -15,7 +15,7 @@ enum DataSourceResponse {
     case error
 }
 
-class MockMissionRemotelDataSource: MissionDataSource {
+class MockMissionDataSource: MissionDataSource {
     var called: Bool = false
     var response: DataSourceResponse = .success
     
