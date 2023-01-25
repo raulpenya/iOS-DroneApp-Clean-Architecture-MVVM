@@ -20,7 +20,6 @@ public class ExecuteMission: UseCase {
     public func execute(_ requestValues: ExecuteMissionRequestValues) -> AnyPublisher<MissionResult, Error> {
         let repository = repository
         return repository.getMissionInfo().flatMap { result in
-            print(result)
             return repository.getMissionResult(result)
         }.eraseToAnyPublisher()
     }

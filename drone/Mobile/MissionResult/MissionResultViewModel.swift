@@ -54,15 +54,14 @@ extension MissionResultViewModel {
         executeMissionUseCase.execute(ExecuteMissionRequestValues()).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
-                print("Error \(error)")
                 self?.missionResult = nil
                 let error = ErrorDescription(text: (error as? RepositoryErrors)?.localizedDescription ?? error.localizedDescription)
                 self?.errorDescription = error
             case .finished:
-                print("MissionResultViewModel :: executeMission :: Publisher is finished")
+                print("MissionResultViewModel :: executeMission :: publisher finished")
             }
         } receiveValue: { [weak self] result in
-            print(result)
+            print("MissionResultViewModel :: executeMission :: result :: \(result)")
             self?.missionResult = result.transformToUI()
         }.cancel()
     }

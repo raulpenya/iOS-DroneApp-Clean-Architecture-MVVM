@@ -10,7 +10,7 @@ import Combine
 protocol UseCase {
     associatedtype T
     associatedtype Q: RequestValues
-    func execute(_ dto: Q) -> AnyPublisher<T, Error>
+    func execute(_ requestValues: Q) -> AnyPublisher<T, Error>
 }
 
 protocol RequestValues { }

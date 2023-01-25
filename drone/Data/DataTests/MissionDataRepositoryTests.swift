@@ -16,7 +16,7 @@ final class MissionDataRepositoryTests: XCTestCase {
         let dataSource = MockMissionRemotelDataSource()
         dataSource.response = .success
         let missionRepository = MissionDataRepository(remoteDataSource: dataSource)
-        let expectation = expectation(description: "test_GetMissionInfo_SUCCESS")
+        let expectation = expectation(description: "testGetMissionInfoSUCCESS")
         var response: DataSourceResponse?
         // When
         missionRepository.getMissionInfo().sink { completion in
