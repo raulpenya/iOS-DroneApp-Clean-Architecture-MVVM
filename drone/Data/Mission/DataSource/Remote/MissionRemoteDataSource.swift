@@ -40,7 +40,7 @@ public class MissionRemoteDataSource: MissionDataSource {
 
 extension MissionRemoteDataSource {
     func getInfoFromFile(_ filename: String = MissionRemoteDataSource.fileName, fileLoader: FileLoader = FileLoader()) throws -> MissionDataRemoteEntity {
-        guard let data = try fileLoader.loadJson(filename: MissionRemoteDataSource.fileName) else {
+        guard let data = try fileLoader.loadJson(filename: filename) else {
             throw RepositoryErrors.jsonError as Error
         }
         return try JSONDecoder().decode(MissionDataRemoteEntity.self, from: data)
