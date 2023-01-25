@@ -14,10 +14,18 @@ struct MockInstructionsRemoteEntity {
     static func getInstructions() -> TrackerInstructions {
         return InstructionsRemoteEntity(instructions: [MockInstructionRemoteEntity.getInstructionLeft(),MockInstructionRemoteEntity.getInstructionRight(),MockInstructionRemoteEntity.getInstructionForward()])
     }
+    
+    static func getInstructionsOUTOFBOUNDS() -> TrackerInstructions {
+        return InstructionsRemoteEntity(instructions: [MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward(),MockInstructionRemoteEntity.getInstructionForward()])
+    }
 }
 
 struct MockInstructions {
     static func getInstructions() -> Instructions {
         return Instructions(instructions: [MockInstruction.getInstructionLeft(),MockInstruction.getInstructionRight(),MockInstruction.getInstructionForward()])
+    }
+    
+    static func getInstructionsOUTOFBOUNDS() -> Instructions {
+        return Instructions(instructions: [MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward(),MockInstruction.getInstructionForward()])
     }
 }

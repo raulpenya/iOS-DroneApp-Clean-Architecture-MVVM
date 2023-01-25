@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum TrackerErrors: Int, Error {
+public enum TrackerErrors: Int, Error {
     case initialPositionOutOfBounds = 700
     case instructionOutOfBounds = 701
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .initialPositionOutOfBounds:
             return "TrackerErrors :: Inital position out of bounds"
@@ -18,5 +18,5 @@ enum TrackerErrors: Int, Error {
             return "TrackerErrors :: Instruction out of bounds"
         }
     }
-    var code: Int { return rawValue }
+    public var code: Int { return rawValue }
 }

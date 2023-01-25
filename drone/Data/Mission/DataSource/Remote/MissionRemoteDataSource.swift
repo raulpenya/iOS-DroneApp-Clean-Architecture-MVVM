@@ -31,14 +31,13 @@ public class MissionRemoteDataSource: MissionDataSource {
         guard let mission = mission.transformToRemote() else {
             return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
-        guard let missionResultDomain = getResultFromTracket(mission: mission).transformToDomain() else {
+        guard let missionResultDomain = getResultFromTracker(mission: mission).transformToDomain() else {
             return Fail(error: RepositoryErrors.parametersException as Error).eraseToAnyPublisher()
         }
         return Result.Publisher(missionResultDomain).eraseToAnyPublisher()
     }
-}
-
-extension MissionRemoteDataSource {
+    
+    //MARK: MissionRemoteDataSource internal funcs
     func getInfoFromFile(_ filename: String = MissionRemoteDataSource.fileName, fileLoader: FileLoader = FileLoader()) throws -> MissionDataRemoteEntity {
         guard let data = try fileLoader.loadJson(filename: filename) else {
             throw RepositoryErrors.jsonError as Error
@@ -46,7 +45,7 @@ extension MissionRemoteDataSource {
         return try JSONDecoder().decode(MissionDataRemoteEntity.self, from: data)
     }
     
-    func getResultFromTracket(_ tracker: Tracker = Tracker(), mission: TrackerMission) -> TrackerMissionResult {
+    func getResultFromTracker(_ tracker: Tracker = Tracker(), mission: TrackerMission) -> TrackerMissionResult {
         return tracker.getResult(from: mission)
     }
 }

@@ -14,10 +14,18 @@ struct MockPositionRemoteEntity {
     static func getPosition() -> TrackerPosition {
         return PositionRemoteEntity(direction: .north, coordinate: .zero)
     }
+    
+    static func getPositionWRONG() -> TrackerPosition {
+        return PositionRemoteEntity(direction: .north, coordinate: CGPoint(x: -1, y: -4))
+    }
 }
 
 struct MockPosition {
     static func getPosition() -> Position {
         return Position(direction: .north, coordinate: .zero)
+    }
+    
+    static func getPositionWRONG() -> Position {
+        return Position(direction: .north, coordinate: CGPoint(x: -1, y: -4))
     }
 }

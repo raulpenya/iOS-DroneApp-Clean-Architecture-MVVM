@@ -26,17 +26,13 @@ internal extension Tracker { // private methods
                 let newDrone = execute(instruction: instruction, with: drone)
                 success = isPositionInBoundaries(newDrone.currentPosition, in: plateau)
                 if !success {
-                    error = NSError(domain: TrackerErrors.instructionOutOfBounds.localizedDescription,
-                                    code: TrackerErrors.instructionOutOfBounds.code,
-                                    userInfo: nil)
+                    error = TrackerErrors.instructionOutOfBounds as Error
                     break
                 }
                 drone = newDrone
             }
         } else {
-            error = NSError(domain: TrackerErrors.initialPositionOutOfBounds.localizedDescription,
-                            code: TrackerErrors.initialPositionOutOfBounds.code,
-                            userInfo: nil)
+            error = TrackerErrors.initialPositionOutOfBounds //as Error
         }
         let result = Result(success: success, position: drone.currentPosition, error: error)
         return MissionResult(mission: mission, result: result)
