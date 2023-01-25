@@ -156,6 +156,7 @@ final class MissionRemoteDataSourceTests: XCTestCase {
         //Then
         XCTAssertTrue(datasource.getInfoFromFileCalled)
         XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
         XCTAssertEqual((errorResponse as! RepositoryErrors).code, RepositoryErrors.jsonError.code)
         XCTAssertEqual((errorResponse as! RepositoryErrors).localizedDescription, RepositoryErrors.jsonError.localizedDescription)
     }
@@ -182,11 +183,10 @@ final class MissionRemoteDataSourceTests: XCTestCase {
         //Then
         XCTAssertTrue(datasource.getInfoFromFileCalled)
         XCTAssertEqual(response, .error)
+        XCTAssertNotNil(errorResponse)
         XCTAssertEqual((errorResponse as! RepositoryErrors).code, RepositoryErrors.jsonError.code)
         XCTAssertEqual((errorResponse as! RepositoryErrors).localizedDescription, RepositoryErrors.jsonError.localizedDescription)
     }
-    
-    
     
     func testGetMissionResultSUCCESS() {
         //Given
@@ -194,13 +194,11 @@ final class MissionRemoteDataSourceTests: XCTestCase {
         let mission = MockMission.getMission()
         let expectation = expectation(description: "testGetMissionResultSUCCESS")
         var response: DataSourceResponse?
-        var errorResponse: Error?
         var missionResult: MissionResult?
         //When
         datasource.getMissionResult(mission).sink { completion in
             switch completion {
-            case .failure(let error):
-                errorResponse = error
+            case .failure:
                 response = .error
             case .finished:
                 response = .success
@@ -221,13 +219,11 @@ final class MissionRemoteDataSourceTests: XCTestCase {
         let mission = MockMission.getMissionWithWRONGInitialPosition()
         let expectation = expectation(description: "testGetMissionResultERRORInitialPosition")
         var response: DataSourceResponse?
-        var errorResponse: Error?
         var missionResult: MissionResult?
         //When
         datasource.getMissionResult(mission).sink { completion in
             switch completion {
-            case .failure(let error):
-                errorResponse = error
+            case .failure:
                 response = .error
             case .finished:
                 response = .success
@@ -239,7 +235,34 @@ final class MissionRemoteDataSourceTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
         //Then
         XCTAssertEqual(response, .success)
-        XCTAssertNil(missionResult?.error)
+        XCTAssertEqual((missionResult?.error as! TrackerErrors).localizedDescription, TrackerErrors.initialPositionOutOfBounds.localizedDescription)
+        XCTAssertEqual((missionResult?.error as! TrackerErrors).code, TrackerErrors.initialPositionOutOfBounds.code)
+    }
+    
+    func testGetMissionResultERROROutOfBounds() {
+        //Given
+        let datasource = MissionRemoteDataSource()
+        let mission = MockMission.getMissionWithInstructionsOUTOFBOUNDS()
+        let expectation = expectation(description: "testGetMissionResultERROROutOfBounds")
+        var response: DataSourceResponse?
+        var missionResult: MissionResult?
+        //When
+        datasource.getMissionResult(mission).sink { completion in
+            switch completion {
+            case .failure:
+                response = .error
+            case .finished:
+                response = .success
+            }
+            expectation.fulfill()
+        } receiveValue: { result in
+            missionResult = result
+        }.cancel()
+        waitForExpectations(timeout: 5, handler: nil)
+        //Then
+        XCTAssertEqual(response, .success)
+        XCTAssertEqual((missionResult?.error as! TrackerErrors).localizedDescription, TrackerErrors.instructionOutOfBounds.localizedDescription)
+        XCTAssertEqual((missionResult?.error as! TrackerErrors).code, TrackerErrors.instructionOutOfBounds.code)
     }
     
     class MockMissionRemoteDataSource: MissionRemoteDataSource {

@@ -34,6 +34,6 @@ struct MockMission {
     }
     
     static func getMissionWithInstructionsOUTOFBOUNDS() -> Mission {
-        return Mission(drone: MockDrone.getDrone(), plateau: MockPlateau.getPlateau(), instructions: MockInstructions.getInstructions())
+        return Mission(drone: MockDrone.getDrone(), plateau: MockPlateau.getPlateau(), instructions: MockInstructions.getInstructionsOUTOFBOUNDS())
     }
 }
