@@ -14,7 +14,7 @@ struct MissionResultRemoteEntity: TrackerMissionResult {
     var result: TrackerResult
 }
 
-extension MissionResultRemoteEntity {
+extension TrackerMissionResult {
     func transformToDomain() -> MissionResult? {
         guard let mission = mission.transformToDomain(), let position = result.position.transformToDomain() else { return nil }
         return MissionResult(mission: mission, lastPosition: position, error: result.error)
