@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum RepositoryErrors: Int, Error {
+public enum RepositoryErrors: Int, Error {
     case executeException = 405
     case parametersException = 406
     case jsonError = 407
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .executeException:
             return "RepositoryErrors :: execute exception"
         case .parametersException:
-            return "TrackerErrors :: parameter exception"
+            return "RepositoryErrors :: parameter exception"
         case .jsonError:
-            return "TrackerErrors :: json error"
+            return "RepositoryErrors :: json error"
         }
     }
-    var code: Int { return rawValue }
+    public var code: Int { return rawValue }
 }

@@ -56,10 +56,10 @@ extension MissionResultViewModel {
             case .failure(let error):
                 print("Error \(error)")
                 self?.missionResult = nil
-                let error = ErrorDescription(text: error.localizedDescription)
+                let error = ErrorDescription(text: (error as? RepositoryErrors)?.localizedDescription ?? error.localizedDescription)
                 self?.errorDescription = error
             case .finished:
-                print("Publisher is finished")
+                print("MissionResultViewModel :: executeMission :: Publisher is finished")
             }
         } receiveValue: { [weak self] result in
             print(result)

@@ -74,9 +74,9 @@
 		0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */; };
 		0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663312979B52400700E96 /* PositionRemoteEntity.swift */; };
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
+		0C8FBB7229812B8D002E38ED /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */; };
 		0C92A8A82980529F0012228F /* MockMissionRemotelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A72980529F0012228F /* MockMissionRemotelDataSource.swift */; };
 		0C92A8AA298053900012228F /* MockMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A92980538F0012228F /* MockMissionResult.swift */; };
-		0C92A8AC29805D2E0012228F /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */; };
 		0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */; };
 		0CC13A2C297AFF8C006F97B8 /* MissionResultRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2B297AFF8C006F97B8 /* MissionResultRemoteEntity.swift */; };
 		0CC13A2E297B018D006F97B8 /* MissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A2D297B018D006F97B8 /* MissionResult.swift */; };
@@ -715,6 +715,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6663272979A8B300700E96 /* UseCase.swift */,
+				0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -723,7 +724,6 @@
 			isa = PBXGroup;
 			children = (
 				0C66632C2979AFF500700E96 /* FileLoader.swift */,
-				0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1129,6 +1129,7 @@
 			files = (
 				0CFE5531297AA66400DBDF45 /* Instruction.swift in Sources */,
 				0C6663282979A8B300700E96 /* UseCase.swift in Sources */,
+				0C8FBB7229812B8D002E38ED /* RepositoryErrors.swift in Sources */,
 				0C6663242979A7DB00700E96 /* MissionRepository.swift in Sources */,
 				0CFE552F297AA63C00DBDF45 /* Instructions.swift in Sources */,
 				0C66632A2979AA1700700E96 /* ExecuteMission.swift in Sources */,
@@ -1153,7 +1154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C92A8AC29805D2E0012228F /* RepositoryErrors.swift in Sources */,
 				0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */,
 				0C2F57E0297962DB005D9AF7 /* DroneRemoteEntity.swift in Sources */,
 				0C35242A29772699002462FF /* Data.docc in Sources */,
