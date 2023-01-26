@@ -1,5 +1,5 @@
 //
-//  MockInstruction.swift
+//  MockTrackerInstruction.swift
 //  TrackerTests
 //
 //  Created by raulbot on 18/1/23.
@@ -8,24 +8,24 @@
 import Foundation
 import Tracker
 
-struct MockInstruction: TrackerInstruction {
+struct MockTrackerInstruction: TrackerInstruction {
     var movement: TrackerMovement
     
     static func getInstructionTurnLeft() -> TrackerInstruction {
-        return MockInstruction(movement: .left)
+        return MockTrackerInstruction(movement: .left)
     }
     
     static func getInstructionTurnRight() -> TrackerInstruction {
-        return MockInstruction(movement: .right)
+        return MockTrackerInstruction(movement: .right)
     }
     
     static func getInstructionMoveForward() -> TrackerInstruction {
-        return MockInstruction(movement: .forward)
+        return MockTrackerInstruction(movement: .forward)
     }
     
     static func createInstruction(_ instructionString: String) -> TrackerInstruction? {
         guard let movement = createMovement(instructionString) else { return nil }
-        return MockInstruction(movement: movement)
+        return MockTrackerInstruction(movement: movement)
     }
     
     static func createMovement(_ movement: String) -> TrackerMovement? {

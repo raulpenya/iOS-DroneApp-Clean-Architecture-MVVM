@@ -12,8 +12,8 @@ final class TrackerTests: XCTestCase {
     //MARK: testIsPositionInBoundaries
     func testIsPositionInBoundariesTRUE() {
         //Given
-        let position = MockPosition.getPositionWithDirection(.north)
-        let plateau = MockPlateau.getPlateau5x5()
+        let position = MockTrackerPosition.getPositionWithDirection(.north)
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let tracker = Tracker()
         //When
         let success = tracker.isPositionInBoundaries(position, in: plateau)
@@ -23,8 +23,8 @@ final class TrackerTests: XCTestCase {
     
     func testIsPositionInBoundariesFALSE() {
         //Given
-        let position = MockPosition.getPositionPointingNorthOutOfBounds()
-        let plateau = MockPlateau.getPlateau5x5()
+        let position = MockTrackerPosition.getPositionPointingNorthOutOfBounds()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let tracker = Tracker()
         //When
         let success = tracker.isPositionInBoundaries(position, in: plateau)
@@ -35,8 +35,8 @@ final class TrackerTests: XCTestCase {
     //MARK: testExecute
     func testExecuteInstruction() {
         //Given
-        let drone = MockDrone.getDrone(direction: .north)
-        let instruction = MockInstruction.getInstructionTurnRight()
+        let drone = MockTrackerDrone.getDrone(direction: .north)
+        let instruction = MockTrackerInstruction.getInstructionTurnRight()
         let tracker = Tracker()
         //When
         let newDrone = tracker.execute(instruction: instruction, with: drone)
@@ -47,7 +47,7 @@ final class TrackerTests: XCTestCase {
     //MARK: testCalculatePath
     func testCalculatePathREQUESTED() {
         //Given
-        let mission = MockMission.getREQUESTEDMission()
+        let mission = MockTrackerMission.getREQUESTEDMission()
         let tracker = Tracker()
         //When
         let result = tracker.calculatePath(with: mission)
@@ -60,7 +60,7 @@ final class TrackerTests: XCTestCase {
 
     func testCalculatePathERRORInitialPosition() {
         //Given
-        let mission = MockMission.getMissionWithWRONGInitialPosition()
+        let mission = MockTrackerMission.getMissionWithWRONGInitialPosition()
         let tracker = Tracker()
         //When
         let result = tracker.calculatePath(with: mission)
@@ -71,7 +71,7 @@ final class TrackerTests: XCTestCase {
     
     func testCalculatePathERRORInstruction() {
         //Given
-        let mission = MockMission.getMissionWithWRONGInstruction()
+        let mission = MockTrackerMission.getMissionWithWRONGInstruction()
         let tracker = Tracker()
         //When
         let result = tracker.calculatePath(with: mission)

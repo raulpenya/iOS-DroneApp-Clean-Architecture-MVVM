@@ -12,7 +12,7 @@ final class TrackerPlateauTests: XCTestCase {
     //MARK: testIsPositionWithinTheBoundaries
     func testPositionINBoundariesTopRightCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint(x: 5, y: 5)
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
@@ -22,7 +22,7 @@ final class TrackerPlateauTests: XCTestCase {
     
     func testPositionINBoundariesBottomLeftCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint.zero
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
@@ -32,7 +32,7 @@ final class TrackerPlateauTests: XCTestCase {
     
     func testPositionYOUTBoundariesTopRightCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint(x: 5, y: 6)
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
@@ -42,7 +42,7 @@ final class TrackerPlateauTests: XCTestCase {
     
     func testPositionXOUTBoundariesTopRightCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint(x: 6, y: 5)
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
@@ -52,7 +52,7 @@ final class TrackerPlateauTests: XCTestCase {
     
     func testPositionYOUTBoundariesBottomLeftCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint(x: 0, y: -1)
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
@@ -62,7 +62,7 @@ final class TrackerPlateauTests: XCTestCase {
     
     func testPositionXOUTBoundariesBottomLeftCorner() {
         //Given
-        let plateau = MockPlateau.getPlateau5x5()
+        let plateau = MockTrackerPlateau.getPlateau5x5()
         let point = CGPoint(x: -1, y: 0)
         //When
         let result = plateau.isPositionWithinTheBoundaries(point)
