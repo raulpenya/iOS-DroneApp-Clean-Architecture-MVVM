@@ -14,6 +14,7 @@ class MissionResultViewModel: ObservableObject {
     @Published var missionResult: MissionResultViewEntity?
     @Published var errorDescription: ErrorDescription?
     let executeMissionUseCase: ExecuteMission
+    static let noDataText = NSLocalizedString("no_data_text", comment: "")
     
     init(executeMissionUseCase: ExecuteMission) {
         self.executeMissionUseCase = executeMissionUseCase
@@ -24,17 +25,17 @@ class MissionResultViewModel: ObservableObject {
     }
     
     func getInitialPositionText() -> String {
-        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        guard let result = missionResult else { return MissionResultViewModel.noDataText }
         return result.initialPosition
     }
     
     func getPlateauText() -> String {
-        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        guard let result = missionResult else { return MissionResultViewModel.noDataText }
         return result.plateau
     }
     
     func getInstructionsText() -> String {
-        guard let result = missionResult else { return NSLocalizedString("no_data_text", comment: "") }
+        guard let result = missionResult else { return MissionResultViewModel.noDataText }
         return result.instructions
     }
     
@@ -47,10 +48,10 @@ class MissionResultViewModel: ObservableObject {
         }
         return text
     }
-}
-
-extension MissionResultViewModel {
-    private func executeMission() {
+    
+    //MARK: MissionResultViewModel private methods
+    //TODO: async method and improve tests
+    internal func executeMission() {
         executeMissionUseCase.execute(ExecuteMissionRequestValues()).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
