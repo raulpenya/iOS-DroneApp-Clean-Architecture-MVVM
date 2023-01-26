@@ -1,14 +1,13 @@
 //
-//  MockMissionResult.swift
+//  MockMissionResultRemoteEntity.swift
 //  DataTests
 //
-//  Created by raulbot on 24/1/23.
+//  Created by raulbot on 26/1/23.
 //
 
 import Foundation
 @testable import Data
 @testable import Tracker
-@testable import Domain
 
 struct MockMissionResultRemoteEntity: TrackerMissionResult {
     var mission: TrackerMission
@@ -20,13 +19,7 @@ struct MockMissionResultRemoteEntity: TrackerMissionResult {
 }
 
 struct MockTrackerResult {
-    static func getTrackerResult() -> Result {
+    static func getTrackerResult() -> TrackerResult {
         return Result(success: true, position: MockPositionRemoteEntity.getPosition())
-    }
-}
-
-struct MockMissionResult {
-    static func getMissionResult() -> Domain.MissionResult {
-        return MissionResult(mission: MockMission.getMission(), lastPosition: MockPosition.getPosition(), error: nil)
     }
 }

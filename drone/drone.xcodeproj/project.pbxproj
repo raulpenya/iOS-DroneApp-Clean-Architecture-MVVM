@@ -76,11 +76,8 @@
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
 		0C8FBB7229812B8D002E38ED /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */; };
 		0C8FBB7629812F42002E38ED /* MockMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */; };
-		0C8FBB7729813181002E38ED /* MockTrackerDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF66298041F700D9659D /* MockTrackerDirection.swift */; };
 		0C8FBB7829813181002E38ED /* MockDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */; };
-		0C8FBB7929813181002E38ED /* MockTrackerMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF6229803FFD00D9659D /* MockTrackerMovement.swift */; };
 		0C8FBB7A29813181002E38ED /* MockMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */; };
-		0C8FBB7B29813181002E38ED /* MockMissionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A72980529F0012228F /* MockMissionDataSource.swift */; };
 		0C8FBB7C29813181002E38ED /* MockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC0297EAC8500D2FB00 /* MockPosition.swift */; };
 		0C8FBB7D29813181002E38ED /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
 		0C8FBB7E29813181002E38ED /* MockMissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */; };
@@ -91,7 +88,6 @@
 		0C8FBB852981415E002E38ED /* MissionResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB842981415E002E38ED /* MissionResultViewModelTests.swift */; };
 		0C8FBB8729814323002E38ED /* MissionResultRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB8629814323002E38ED /* MissionResultRemoteEntityTests.swift */; };
 		0C92A8A82980529F0012228F /* MockMissionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A72980529F0012228F /* MockMissionDataSource.swift */; };
-		0C92A8AA298053900012228F /* MockMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A92980538F0012228F /* MockMissionResult.swift */; };
 		0C945BC329814F21009DC722 /* TrackerMissionResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C945BC229814F21009DC722 /* TrackerMissionResult+Extensions.swift */; };
 		0C945BC5298152F3009DC722 /* MissionRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C945BC4298152F3009DC722 /* MissionRemoteDataSourceTests.swift */; };
 		0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */; };
@@ -105,20 +101,30 @@
 		0CC13A3C297B11C9006F97B8 /* InstructionRemoteEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3B297B11C9006F97B8 /* InstructionRemoteEntityTests.swift */; };
 		0CC13A3E297B127F006F97B8 /* MissionDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3D297B127F006F97B8 /* MissionDataRepositoryTests.swift */; };
 		0CC13A40297B1418006F97B8 /* ExecuteMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13A3F297B1418006F97B8 /* ExecuteMissionTests.swift */; };
-		0CC5DF6329803FFD00D9659D /* MockTrackerMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF6229803FFD00D9659D /* MockTrackerMovement.swift */; };
 		0CC5DF652980409500D9659D /* TrackerMovementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF642980409500D9659D /* TrackerMovementTests.swift */; };
-		0CC5DF67298041F700D9659D /* MockTrackerDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF66298041F700D9659D /* MockTrackerDirection.swift */; };
 		0CC5DF692980428100D9659D /* TrackerDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF682980428100D9659D /* TrackerDirectionTests.swift */; };
-		0CD5D7FC297FF84600EBEDE0 /* MockMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */; };
-		0CD5D7FE297FFBE100EBEDE0 /* MockInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FD297FFBE100EBEDE0 /* MockInstructions.swift */; };
-		0CD5D800297FFD8800EBEDE0 /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
+		0CDDEB912982A5AB0042F36E /* MissionResultViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB902982A5AB0042F36E /* MissionResultViewEntityTests.swift */; };
+		0CDDEB962982A7AC0042F36E /* MockMissionResultViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB952982A7AC0042F36E /* MockMissionResultViewEntity.swift */; };
+		0CDDEB982982A85F0042F36E /* MockMissionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB972982A85F0042F36E /* MockMissionRemoteEntity.swift */; };
+		0CDDEB9A2982A8860042F36E /* MockDroneRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB992982A8860042F36E /* MockDroneRemoteEntity.swift */; };
+		0CDDEB9C2982A9200042F36E /* MockPositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB9B2982A9200042F36E /* MockPositionRemoteEntity.swift */; };
+		0CDDEB9E2982A94A0042F36E /* MockPlateauRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB9D2982A94A0042F36E /* MockPlateauRemoteEntity.swift */; };
+		0CDDEBA02982A9720042F36E /* MockInstructionsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEB9F2982A9720042F36E /* MockInstructionsRemoteEntity.swift */; };
+		0CDDEBA22982A9B30042F36E /* MockInstructionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEBA12982A9B30042F36E /* MockInstructionRemoteEntity.swift */; };
+		0CDDEBA42982A9EF0042F36E /* MockMissionResultRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDEBA32982A9EF0042F36E /* MockMissionResultRemoteEntity.swift */; };
+		0CDDEBA62982AA560042F36E /* MockTrackerMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF6229803FFD00D9659D /* MockTrackerMovement.swift */; };
+		0CDDEBA72982AA580042F36E /* MockTrackerDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5DF66298041F700D9659D /* MockTrackerDirection.swift */; };
+		0CDDEBA82982AAC40042F36E /* MockMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */; };
+		0CDDEBA92982AAF70042F36E /* MockMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8A92980538F0012228F /* MockMissionResult.swift */; };
+		0CDDEBAA2982AB460042F36E /* MockPlateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC4297EB1F200D2FB00 /* MockPlateau.swift */; };
+		0CDDEBAB2982AB580042F36E /* MockInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FD297FFBE100EBEDE0 /* MockInstructions.swift */; };
+		0CDDEBAC2982AB5A0042F36E /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
+		0CDDEBAD2982AB620042F36E /* MockDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */; };
+		0CDDEBAE2982AB730042F36E /* MockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC0297EAC8500D2FB00 /* MockPosition.swift */; };
 		0CFE552F297AA63C00DBDF45 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE552E297AA63C00DBDF45 /* Instructions.swift */; };
 		0CFE5531297AA66400DBDF45 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5530297AA66400DBDF45 /* Instruction.swift */; };
 		0CFE5533297AA6A900DBDF45 /* InstructionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */; };
 		0CFE5535297AAA6000DBDF45 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE5534297AAA6000DBDF45 /* Position.swift */; };
-		0CFEBFC1297EAC8500D2FB00 /* MockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC0297EAC8500D2FB00 /* MockPosition.swift */; };
-		0CFEBFC3297EB18100D2FB00 /* MockDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */; };
-		0CFEBFC5297EB1F200D2FB00 /* MockPlateau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC4297EB1F200D2FB00 /* MockPlateau.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,6 +340,15 @@
 		0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMission.swift; sourceTree = "<group>"; };
 		0CD5D7FD297FFBE100EBEDE0 /* MockInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstructions.swift; sourceTree = "<group>"; };
 		0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstruction.swift; sourceTree = "<group>"; };
+		0CDDEB902982A5AB0042F36E /* MissionResultViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewEntityTests.swift; sourceTree = "<group>"; };
+		0CDDEB952982A7AC0042F36E /* MockMissionResultViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionResultViewEntity.swift; sourceTree = "<group>"; };
+		0CDDEB972982A85F0042F36E /* MockMissionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEB992982A8860042F36E /* MockDroneRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDroneRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEB9B2982A9200042F36E /* MockPositionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPositionRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEB9D2982A94A0042F36E /* MockPlateauRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlateauRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEB9F2982A9720042F36E /* MockInstructionsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstructionsRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEBA12982A9B30042F36E /* MockInstructionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInstructionRemoteEntity.swift; sourceTree = "<group>"; };
+		0CDDEBA32982A9EF0042F36E /* MockMissionResultRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionResultRemoteEntity.swift; sourceTree = "<group>"; };
 		0CFE552E297AA63C00DBDF45 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		0CFE5530297AA66400DBDF45 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		0CFE5532297AA6A800DBDF45 /* InstructionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionRemoteEntity.swift; sourceTree = "<group>"; };
@@ -492,7 +507,9 @@
 		0C3523E4297725F0002462FF /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				0CDDEB922982A6030042F36E /* Mocks */,
 				0C8FBB842981415E002E38ED /* MissionResultViewModelTests.swift */,
+				0CDDEB902982A5AB0042F36E /* MissionResultViewEntityTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -762,6 +779,13 @@
 		0C8FBB7429812F2C002E38ED /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */,
+				0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */,
+				0CFEBFC0297EAC8500D2FB00 /* MockPosition.swift */,
+				0CFEBFC4297EB1F200D2FB00 /* MockPlateau.swift */,
+				0CD5D7FD297FFBE100EBEDE0 /* MockInstructions.swift */,
+				0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */,
+				0C92A8A92980538F0012228F /* MockMissionResult.swift */,
 				0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */,
 			);
 			path = Mocks;
@@ -771,16 +795,24 @@
 			isa = PBXGroup;
 			children = (
 				0CA7B876297E953D00F5F75E /* MockMissionDataRemoteEntity.swift */,
-				0CD5D7FB297FF84600EBEDE0 /* MockMission.swift */,
-				0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */,
-				0CFEBFC0297EAC8500D2FB00 /* MockPosition.swift */,
-				0CFEBFC4297EB1F200D2FB00 /* MockPlateau.swift */,
-				0CD5D7FD297FFBE100EBEDE0 /* MockInstructions.swift */,
-				0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */,
+				0CDDEB972982A85F0042F36E /* MockMissionRemoteEntity.swift */,
+				0CDDEB992982A8860042F36E /* MockDroneRemoteEntity.swift */,
+				0CDDEB9B2982A9200042F36E /* MockPositionRemoteEntity.swift */,
+				0CDDEB9D2982A94A0042F36E /* MockPlateauRemoteEntity.swift */,
+				0CDDEB9F2982A9720042F36E /* MockInstructionsRemoteEntity.swift */,
+				0CDDEBA12982A9B30042F36E /* MockInstructionRemoteEntity.swift */,
+				0CDDEBA32982A9EF0042F36E /* MockMissionResultRemoteEntity.swift */,
 				0CC5DF6229803FFD00D9659D /* MockTrackerMovement.swift */,
 				0CC5DF66298041F700D9659D /* MockTrackerDirection.swift */,
-				0C92A8A92980538F0012228F /* MockMissionResult.swift */,
 				0C92A8A72980529F0012228F /* MockMissionDataSource.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0CDDEB922982A6030042F36E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0CDDEB952982A7AC0042F36E /* MockMissionResultViewEntity.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1150,6 +1182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8FBB852981415E002E38ED /* MissionResultViewModelTests.swift in Sources */,
+				0CDDEB912982A5AB0042F36E /* MissionResultViewEntityTests.swift in Sources */,
+				0CDDEB962982A7AC0042F36E /* MockMissionResultViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,11 +1225,8 @@
 				0C8FBB7A29813181002E38ED /* MockMission.swift in Sources */,
 				0C8FBB7829813181002E38ED /* MockDrone.swift in Sources */,
 				0C8FBB7629812F42002E38ED /* MockMissionRepository.swift in Sources */,
-				0C8FBB7729813181002E38ED /* MockTrackerDirection.swift in Sources */,
 				0C8FBB7C29813181002E38ED /* MockPosition.swift in Sources */,
 				0C8FBB8129813181002E38ED /* MockPlateau.swift in Sources */,
-				0C8FBB7B29813181002E38ED /* MockMissionDataSource.swift in Sources */,
-				0C8FBB7929813181002E38ED /* MockTrackerMovement.swift in Sources */,
 				0CC13A40297B1418006F97B8 /* ExecuteMissionTests.swift in Sources */,
 				0C8FBB7E29813181002E38ED /* MockMissionDataRemoteEntity.swift in Sources */,
 			);
@@ -1225,30 +1256,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD5D7FC297FF84600EBEDE0 /* MockMission.swift in Sources */,
-				0CFEBFC3297EB18100D2FB00 /* MockDrone.swift in Sources */,
+				0CDDEB9C2982A9200042F36E /* MockPositionRemoteEntity.swift in Sources */,
+				0CDDEBA92982AAF70042F36E /* MockMissionResult.swift in Sources */,
 				0CC13A34297B1160006F97B8 /* DroneRemoteEntityTests.swift in Sources */,
 				0CC5DF652980409500D9659D /* TrackerMovementTests.swift in Sources */,
+				0CDDEBAE2982AB730042F36E /* MockPosition.swift in Sources */,
 				0C92A8A82980529F0012228F /* MockMissionDataSource.swift in Sources */,
+				0CDDEBA72982AA580042F36E /* MockTrackerDirection.swift in Sources */,
+				0CDDEBAD2982AB620042F36E /* MockDrone.swift in Sources */,
 				0CC13A38297B1183006F97B8 /* PlateauRemoteEntityTests.swift in Sources */,
 				0C8FBB8329813E2B002E38ED /* FileLoaderTests.swift in Sources */,
-				0CFEBFC5297EB1F200D2FB00 /* MockPlateau.swift in Sources */,
-				0CC5DF6329803FFD00D9659D /* MockTrackerMovement.swift in Sources */,
+				0CDDEB982982A85F0042F36E /* MockMissionRemoteEntity.swift in Sources */,
+				0CDDEBA02982A9720042F36E /* MockInstructionsRemoteEntity.swift in Sources */,
+				0CDDEB9E2982A94A0042F36E /* MockPlateauRemoteEntity.swift in Sources */,
 				0CC13A3C297B11C9006F97B8 /* InstructionRemoteEntityTests.swift in Sources */,
-				0CFEBFC1297EAC8500D2FB00 /* MockPosition.swift in Sources */,
+				0CDDEBAC2982AB5A0042F36E /* MockInstruction.swift in Sources */,
 				0CC13A30297B1119006F97B8 /* MissionDataRemoteEntityTests.swift in Sources */,
+				0CDDEBAA2982AB460042F36E /* MockPlateau.swift in Sources */,
 				0C8FBB8729814323002E38ED /* MissionResultRemoteEntityTests.swift in Sources */,
 				0C945BC5298152F3009DC722 /* MissionRemoteDataSourceTests.swift in Sources */,
 				0CA7B877297E953D00F5F75E /* MockMissionDataRemoteEntity.swift in Sources */,
 				0CC13A3E297B127F006F97B8 /* MissionDataRepositoryTests.swift in Sources */,
+				0CDDEB9A2982A8860042F36E /* MockDroneRemoteEntity.swift in Sources */,
 				0CC13A3A297B11AD006F97B8 /* InstructionsRemoteEntityTests.swift in Sources */,
-				0CD5D7FE297FFBE100EBEDE0 /* MockInstructions.swift in Sources */,
-				0C92A8AA298053900012228F /* MockMissionResult.swift in Sources */,
-				0CD5D800297FFD8800EBEDE0 /* MockInstruction.swift in Sources */,
+				0CDDEBAB2982AB580042F36E /* MockInstructions.swift in Sources */,
+				0CDDEBA42982A9EF0042F36E /* MockMissionResultRemoteEntity.swift in Sources */,
+				0CDDEBA62982AA560042F36E /* MockTrackerMovement.swift in Sources */,
 				0CC13A32297B1153006F97B8 /* MissionRemoteEntityTests.swift in Sources */,
-				0CC5DF67298041F700D9659D /* MockTrackerDirection.swift in Sources */,
+				0CDDEBA22982A9B30042F36E /* MockInstructionRemoteEntity.swift in Sources */,
 				0CC5DF692980428100D9659D /* TrackerDirectionTests.swift in Sources */,
 				0CC13A36297B1172006F97B8 /* PositionRemoteEntityTests.swift in Sources */,
+				0CDDEBA82982AAC40042F36E /* MockMission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
