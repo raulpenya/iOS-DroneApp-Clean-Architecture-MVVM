@@ -3,4 +3,4 @@ This is just a sample project to test new technologies :)
 
 ## Architecture scheme:
 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/28446011/214829679-d9e51d59-22dc-48c0-abda-9d27f7b077df.png)
+![drone_architecture_scheme](https://user-images.githubusercontent.com/28446011/214830873-cbf153f9-0efd-4891-8dee-cf5a18334285.png)
