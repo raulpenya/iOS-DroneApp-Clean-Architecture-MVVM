@@ -1,0 +1,6 @@
+{
+"topRightCorner": { "x" : 5, "y" : 5 },
+"roverPosition": {"x" : 1, "y" : 2 },
+"roverDirection": "N",
+"movements" : "LMLMLMLMM"
+}
