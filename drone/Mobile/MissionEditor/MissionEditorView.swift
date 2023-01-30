@@ -10,9 +10,18 @@ import SwiftUI
 struct MissionEditorView: View {
     
     @ObservedObject var viewModel: MissionEditorViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Text("MissionEditor")
+            .navigationTitle("MissionEditor")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Dismiss", action: dismiss.callAsFunction)
+                }
+            }
+        }
     }
 }
 
