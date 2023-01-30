@@ -13,6 +13,7 @@ class MissionResultViewModel: ObservableObject {
     
     @Published var missionResult: MissionResultViewEntity?
     @Published var errorDescription: ErrorDescription?
+    @Published var shouldShowMissionEditor: Bool = false
     let executeMissionUseCase: ExecuteMission
     static let noDataText = NSLocalizedString("no_data_text", comment: "")
     
@@ -21,7 +22,7 @@ class MissionResultViewModel: ObservableObject {
     }
     
     func editMissionButtonPressed() {
-        
+        shouldShowMissionEditor = true
     }
     
     func executeMissionButtonPressed() {
