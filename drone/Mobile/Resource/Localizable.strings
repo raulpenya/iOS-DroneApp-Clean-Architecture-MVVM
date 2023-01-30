@@ -13,3 +13,4 @@
 "instructions_text" = "Instructions:";
 "execute_mission_text" = "Execute mission";
 "no_data_text" = "no data";
+"set_custom_mission_text" = "set custom mission params";

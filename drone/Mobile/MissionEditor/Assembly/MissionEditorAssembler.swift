@@ -20,4 +20,3 @@ extension MissionEditorAssembler {
 }
 
 class MissionEditorAssemblerInjection: MissionEditorAssembler {}
-

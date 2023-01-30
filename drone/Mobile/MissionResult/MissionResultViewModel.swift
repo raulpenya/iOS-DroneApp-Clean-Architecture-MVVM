@@ -20,6 +20,10 @@ class MissionResultViewModel: ObservableObject {
         self.executeMissionUseCase = executeMissionUseCase
     }
     
+    func editMissionButtonPressed() {
+        
+    }
+    
     func executeMissionButtonPressed() {
         executeMission()
     }

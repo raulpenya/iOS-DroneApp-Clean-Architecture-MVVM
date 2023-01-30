@@ -36,6 +36,9 @@ struct MissionResultView: View {
                 }
                 Text(viewModel.getResultText())
                     .applyResultLabelStyle()
+                Button(NSLocalizedString("set_custom_mission_text", comment: "")) {
+                    viewModel.editMissionButtonPressed()
+                }.padding(.vertical, 16).buttonStyle(EditButtonStyle())
                 Button(NSLocalizedString("execute_mission_text", comment: "")) {
                     viewModel.executeMissionButtonPressed()
                 }.padding(.vertical, 16).buttonStyle(ActionButtonStyle())

@@ -91,6 +91,7 @@
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
 		0C713DD529881CDE00B4BA88 /* MissionEditorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713DD429881CDE00B4BA88 /* MissionEditorAssembler.swift */; };
 		0C713DD729881D9000B4BA88 /* MissionEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713DD629881D9000B4BA88 /* MissionEditorViewModel.swift */; };
+		0C713DD929881FC500B4BA88 /* EditButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713DD829881FC500B4BA88 /* EditButtonStyle.swift */; };
 		0C8FBB7229812B8D002E38ED /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */; };
 		0C8FBB7629812F42002E38ED /* MockMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */; };
 		0C8FBB7829813181002E38ED /* MockDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */; };
@@ -337,6 +338,7 @@
 		0C6663352979BFB300700E96 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		0C713DD429881CDE00B4BA88 /* MissionEditorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEditorAssembler.swift; sourceTree = "<group>"; };
 		0C713DD629881D9000B4BA88 /* MissionEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEditorViewModel.swift; sourceTree = "<group>"; };
+		0C713DD829881FC500B4BA88 /* EditButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonStyle.swift; sourceTree = "<group>"; };
 		0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionRepository.swift; sourceTree = "<group>"; };
 		0C8FBB8229813E2B002E38ED /* FileLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoaderTests.swift; sourceTree = "<group>"; };
 		0C8FBB842981415E002E38ED /* MissionResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewModelTests.swift; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 			children = (
 				0C560337297EF58D0019F223 /* Text+Extension.swift */,
 				0C560335297EF4B00019F223 /* ActionButtonStyle.swift */,
+				0C713DD829881FC500B4BA88 /* EditButtonStyle.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -1229,6 +1232,7 @@
 				0C56032C297EE8F60019F223 /* MissionResultView.swift in Sources */,
 				0C2537902987F4B1002A33B7 /* Router.swift in Sources */,
 				0C560338297EF58D0019F223 /* Text+Extension.swift in Sources */,
+				0C713DD929881FC500B4BA88 /* EditButtonStyle.swift in Sources */,
 				0C2537992987F755002A33B7 /* MissionEditorView.swift in Sources */,
 				0C56032A297EE8B00019F223 /* MissionResultViewModel.swift in Sources */,
 				0C560336297EF4B00019F223 /* ActionButtonStyle.swift in Sources */,
