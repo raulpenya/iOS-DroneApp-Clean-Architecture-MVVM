@@ -89,6 +89,8 @@
 		0C6663302979B20200700E96 /* MissionDataRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */; };
 		0C6663322979B52400700E96 /* PositionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663312979B52400700E96 /* PositionRemoteEntity.swift */; };
 		0C6663362979BFB300700E96 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6663352979BFB300700E96 /* Mission.swift */; };
+		0C713DD529881CDE00B4BA88 /* MissionEditorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713DD429881CDE00B4BA88 /* MissionEditorAssembler.swift */; };
+		0C713DD729881D9000B4BA88 /* MissionEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C713DD629881D9000B4BA88 /* MissionEditorViewModel.swift */; };
 		0C8FBB7229812B8D002E38ED /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92A8AB29805D2E0012228F /* RepositoryErrors.swift */; };
 		0C8FBB7629812F42002E38ED /* MockMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */; };
 		0C8FBB7829813181002E38ED /* MockDrone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFEBFC2297EB18100D2FB00 /* MockDrone.swift */; };
@@ -333,6 +335,8 @@
 		0C66632F2979B20200700E96 /* MissionDataRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663312979B52400700E96 /* PositionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionRemoteEntity.swift; sourceTree = "<group>"; };
 		0C6663352979BFB300700E96 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		0C713DD429881CDE00B4BA88 /* MissionEditorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEditorAssembler.swift; sourceTree = "<group>"; };
+		0C713DD629881D9000B4BA88 /* MissionEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEditorViewModel.swift; sourceTree = "<group>"; };
 		0C8FBB7529812F42002E38ED /* MockMissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionRepository.swift; sourceTree = "<group>"; };
 		0C8FBB8229813E2B002E38ED /* FileLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoaderTests.swift; sourceTree = "<group>"; };
 		0C8FBB842981415E002E38ED /* MissionResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewModelTests.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 			children = (
 				0C2537942987F710002A33B7 /* Assembly */,
 				0C2537952987F717002A33B7 /* Model */,
+				0C713DD629881D9000B4BA88 /* MissionEditorViewModel.swift */,
 				0C2537982987F755002A33B7 /* MissionEditorView.swift */,
 			);
 			path = MissionEditor;
@@ -466,6 +471,7 @@
 		0C2537942987F710002A33B7 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				0C713DD429881CDE00B4BA88 /* MissionEditorAssembler.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -1218,6 +1224,7 @@
 			files = (
 				0C3523D5297725E7002462FF /* droneApp.swift in Sources */,
 				0C560330297EE9440019F223 /* MissionResultAssembler.swift in Sources */,
+				0C713DD529881CDE00B4BA88 /* MissionEditorAssembler.swift in Sources */,
 				0C56032E297EE9270019F223 /* MissionResultViewEntity.swift in Sources */,
 				0C56032C297EE8F60019F223 /* MissionResultView.swift in Sources */,
 				0C2537902987F4B1002A33B7 /* Router.swift in Sources */,
@@ -1226,6 +1233,7 @@
 				0C56032A297EE8B00019F223 /* MissionResultViewModel.swift in Sources */,
 				0C560336297EF4B00019F223 /* ActionButtonStyle.swift in Sources */,
 				0C2537922987F618002A33B7 /* MissionResultRouter.swift in Sources */,
+				0C713DD729881D9000B4BA88 /* MissionEditorViewModel.swift in Sources */,
 				0C560342297F0B180019F223 /* ErrorDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

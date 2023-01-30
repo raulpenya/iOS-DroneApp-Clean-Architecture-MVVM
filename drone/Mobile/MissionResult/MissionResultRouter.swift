@@ -12,7 +12,7 @@ class MissionResultRouter: Router {
     typealias Q = MissionEditorDependecies
     
     func destination(_ dependencies: MissionEditorDependecies) -> MissionEditorView {
-        return MissionEditorView() //TODO: injection
+        return MissionEditorAssemblerInjection().resolve()
     }
 }
 

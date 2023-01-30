@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MissionEditorView: View {
+    
+    @ObservedObject var viewModel: MissionEditorViewModel
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +18,6 @@ struct MissionEditorView: View {
 
 struct MissionEditorView_Previews: PreviewProvider {
     static var previews: some View {
-        MissionEditorView()
+        MissionEditorAssemblerInjection().resolve()
     }
 }
