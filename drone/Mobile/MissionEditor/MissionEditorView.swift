@@ -15,12 +15,12 @@ struct MissionEditorView: View {
     var body: some View {
         NavigationStack {
             Text("MissionEditor")
-            .navigationTitle("MissionEditor")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Dismiss", action: dismiss.callAsFunction)
+                .navigationTitle("MissionEditor")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Dismiss", action: dismiss.callAsFunction)
+                    }
                 }
-            }
         }
     }
 }
