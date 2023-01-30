@@ -19,6 +19,9 @@
 		0C1AB67B2982E46800D6EA31 /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
 		0C1AB67C2982E46B00D6EA31 /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
 		0C1AB67D2982E46C00D6EA31 /* MockInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5D7FF297FFD8800EBEDE0 /* MockInstruction.swift */; };
+		0C2537902987F4B1002A33B7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25378F2987F4B1002A33B7 /* Router.swift */; };
+		0C2537922987F618002A33B7 /* MissionResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2537912987F618002A33B7 /* MissionResultRouter.swift */; };
+		0C2537992987F755002A33B7 /* MissionEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2537982987F755002A33B7 /* MissionEditorView.swift */; };
 		0C2F57CB29794BE6005D9AF7 /* MockTrackerInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CA29794BE6005D9AF7 /* MockTrackerInstructions.swift */; };
 		0C2F57D02979536C005D9AF7 /* MockTrackerMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57CE2979536C005D9AF7 /* MockTrackerMission.swift */; };
 		0C2F57D329796266005D9AF7 /* MissionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F57D229796266005D9AF7 /* MissionDataSource.swift */; };
@@ -264,6 +267,9 @@
 		0C1AB66E2982D2C400D6EA31 /* CustomStringConvertibleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertibleExtensionsTests.swift; sourceTree = "<group>"; };
 		0C1AB6762982D95800D6EA31 /* MockExecuteMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExecuteMission.swift; sourceTree = "<group>"; };
 		0C1AB6792982DFB700D6EA31 /* MockMissionResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMissionResultViewModel.swift; sourceTree = "<group>"; };
+		0C25378F2987F4B1002A33B7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0C2537912987F618002A33B7 /* MissionResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultRouter.swift; sourceTree = "<group>"; };
+		0C2537982987F755002A33B7 /* MissionEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEditorView.swift; sourceTree = "<group>"; };
 		0C2F57CA29794BE6005D9AF7 /* MockTrackerInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackerInstructions.swift; sourceTree = "<group>"; };
 		0C2F57CE2979536C005D9AF7 /* MockTrackerMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackerMission.swift; sourceTree = "<group>"; };
 		0C2F57D229796266005D9AF7 /* MissionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataSource.swift; sourceTree = "<group>"; };
@@ -447,6 +453,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2537932987F6F3002A33B7 /* MissionEditor */ = {
+			isa = PBXGroup;
+			children = (
+				0C2537942987F710002A33B7 /* Assembly */,
+				0C2537952987F717002A33B7 /* Model */,
+				0C2537982987F755002A33B7 /* MissionEditorView.swift */,
+			);
+			path = MissionEditor;
+			sourceTree = "<group>";
+		};
+		0C2537942987F710002A33B7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0C2537952987F717002A33B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0C2F57D129796245005D9AF7 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +530,7 @@
 				0C56033F297F0AF30019F223 /* Common */,
 				0C560334297EF49B0019F223 /* CommonUI */,
 				0C560326297EE84D0019F223 /* MissionResult */,
+				0C2537932987F6F3002A33B7 /* MissionEditor */,
 				0C560331297EF0AC0019F223 /* Resource */,
 				0C3523D4297725E7002462FF /* droneApp.swift */,
 				0C3523D8297725EF002462FF /* Assets.xcassets */,
@@ -665,6 +696,7 @@
 				0C560328297EE8660019F223 /* Assembly */,
 				0C560327297EE85E0019F223 /* Model */,
 				0C560329297EE8B00019F223 /* MissionResultViewModel.swift */,
+				0C2537912987F618002A33B7 /* MissionResultRouter.swift */,
 				0C56032B297EE8F50019F223 /* MissionResultView.swift */,
 			);
 			path = MissionResult;
@@ -707,6 +739,7 @@
 			isa = PBXGroup;
 			children = (
 				0C560340297F0AFD0019F223 /* Model */,
+				0C25378F2987F4B1002A33B7 /* Router.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1187,9 +1220,12 @@
 				0C560330297EE9440019F223 /* MissionResultAssembler.swift in Sources */,
 				0C56032E297EE9270019F223 /* MissionResultViewEntity.swift in Sources */,
 				0C56032C297EE8F60019F223 /* MissionResultView.swift in Sources */,
+				0C2537902987F4B1002A33B7 /* Router.swift in Sources */,
 				0C560338297EF58D0019F223 /* Text+Extension.swift in Sources */,
+				0C2537992987F755002A33B7 /* MissionEditorView.swift in Sources */,
 				0C56032A297EE8B00019F223 /* MissionResultViewModel.swift in Sources */,
 				0C560336297EF4B00019F223 /* ActionButtonStyle.swift in Sources */,
+				0C2537922987F618002A33B7 /* MissionResultRouter.swift in Sources */,
 				0C560342297F0B180019F223 /* ErrorDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
