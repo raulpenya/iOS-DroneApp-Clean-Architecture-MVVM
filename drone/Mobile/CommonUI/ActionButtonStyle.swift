@@ -12,9 +12,9 @@ struct ActionButtonStyle: ButtonStyle {
         configuration.label
             .padding(.horizontal, 10)
             .padding(.vertical, 10)
-            .font(.system(size: 20, weight: Font.Weight.bold))
-            .foregroundColor(Color.white)
-            .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
+            .font(.system(size: 20, weight: .bold))
+            .foregroundColor(.white)
+            .background(RoundedRectangle(cornerRadius: 8).fill(.blue))
             .buttonStyle(PlainButtonStyle())
     }
 }
