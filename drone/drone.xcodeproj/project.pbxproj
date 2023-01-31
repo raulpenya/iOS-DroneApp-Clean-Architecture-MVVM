@@ -33,8 +33,6 @@
 		0C3523D5297725E7002462FF /* droneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523D4297725E7002462FF /* droneApp.swift */; };
 		0C3523D9297725EF002462FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3523D8297725EF002462FF /* Assets.xcassets */; };
 		0C3523DC297725EF002462FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3523DB297725EF002462FF /* Preview Assets.xcassets */; };
-		0C3523F0297725F1002462FF /* droneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523EF297725F1002462FF /* droneUITests.swift */; };
-		0C3523F2297725F1002462FF /* droneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3523F1297725F1002462FF /* droneUITestsLaunchTests.swift */; };
 		0C35240729772687002462FF /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C35240629772686002462FF /* Domain.docc */; };
 		0C35240D29772688002462FF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C35240329772686002462FF /* Domain.framework */; };
 		0C35241529772688002462FF /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C35240529772686002462FF /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +71,9 @@
 		0C51B9082978229200D1482E /* TrackerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9072978229200D1482E /* TrackerPosition.swift */; };
 		0C51B90A2978230000D1482E /* TrackerMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B9092978230000D1482E /* TrackerMission.swift */; };
 		0C51B90C2978243D00D1482E /* TrackerMissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */; };
+		0C558F8F298932A900A6D6C9 /* Snapfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C558F8D298932A900A6D6C9 /* Snapfile */; };
+		0C558F90298932A900A6D6C9 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C558F8E298932A900A6D6C9 /* SnapshotHelper.swift */; };
+		0C558F922989337F00A6D6C9 /* SnapshotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C558F912989337F00A6D6C9 /* SnapshotsUITests.swift */; };
 		0C56032A297EE8B00019F223 /* MissionResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C560329297EE8B00019F223 /* MissionResultViewModel.swift */; };
 		0C56032C297EE8F60019F223 /* MissionResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56032B297EE8F50019F223 /* MissionResultView.swift */; };
 		0C56032E297EE9270019F223 /* MissionResultViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56032D297EE9270019F223 /* MissionResultViewEntity.swift */; };
@@ -287,8 +288,6 @@
 		0C3523DB297725EF002462FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C3523E1297725F0002462FF /* droneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = droneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3523EB297725F1002462FF /* droneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = droneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C3523EF297725F1002462FF /* droneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneUITests.swift; sourceTree = "<group>"; };
-		0C3523F1297725F1002462FF /* droneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = droneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C35240329772686002462FF /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C35240529772686002462FF /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		0C35240629772686002462FF /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -320,6 +319,9 @@
 		0C51B9072978229200D1482E /* TrackerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerPosition.swift; sourceTree = "<group>"; };
 		0C51B9092978230000D1482E /* TrackerMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMission.swift; sourceTree = "<group>"; };
 		0C51B90B2978243D00D1482E /* TrackerMissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerMissionResult.swift; sourceTree = "<group>"; };
+		0C558F8D298932A900A6D6C9 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
+		0C558F8E298932A900A6D6C9 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		0C558F912989337F00A6D6C9 /* SnapshotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsUITests.swift; sourceTree = "<group>"; };
 		0C560329297EE8B00019F223 /* MissionResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewModel.swift; sourceTree = "<group>"; };
 		0C56032B297EE8F50019F223 /* MissionResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultView.swift; sourceTree = "<group>"; };
 		0C56032D297EE9270019F223 /* MissionResultViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultViewEntity.swift; sourceTree = "<group>"; };
@@ -571,8 +573,9 @@
 		0C3523EE297725F1002462FF /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				0C3523EF297725F1002462FF /* droneUITests.swift */,
-				0C3523F1297725F1002462FF /* droneUITestsLaunchTests.swift */,
+				0C558F8D298932A900A6D6C9 /* Snapfile */,
+				0C558F8E298932A900A6D6C9 /* SnapshotHelper.swift */,
+				0C558F912989337F00A6D6C9 /* SnapshotsUITests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -1173,6 +1176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C558F8F298932A900A6D6C9 /* Snapfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,8 +1271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3523F0297725F1002462FF /* droneUITests.swift in Sources */,
-				0C3523F2297725F1002462FF /* droneUITestsLaunchTests.swift in Sources */,
+				0C558F922989337F00A6D6C9 /* SnapshotsUITests.swift in Sources */,
+				0C558F90298932A900A6D6C9 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
