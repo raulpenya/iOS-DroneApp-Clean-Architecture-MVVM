@@ -1,7 +1,7 @@
 # drone
 This is just a sample project to test new technologies :)
 
-This project is built under SOLID principles, clean architecture and MVVM. It uses SwiftUI for presentation and Combine framework to communicate between the different layers.
+This project is built under SOLID principles, clean architecture, modular architecture and MVVM in the presentation layer. It uses SwiftUI for presentation and Combine framework to communicate between the different layers.
 
 The layers that compose this project are:
 - Presentation Layer:
