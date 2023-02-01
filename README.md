@@ -21,7 +21,7 @@ The layers that compose this project are:
 I've also created a module called "Tracker". 
 - Tracker module:
     - This module is only accessible from the data layer and it's who calculates the final position of the drone.
-    - The "Tracker" module is another source of data for the app (as it could be an API or other external libraries). I've taken this decision to isolate this logic from the rest of the app due this way you can modify its code and logic without impact to the rest of the app and also this module could be shared this logic with other future apps.
+    - The Tracker module is another source of data for the app (as it could be an API or other external libraries). I've taken this decision to decouple and totally isolate this logic from the rest of the app, because this way you can modify its code and logic without impact to the rest of the app and also share this logic with other future apps.
 
 ## Architecture scheme:
 
