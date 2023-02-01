@@ -1,13 +1,13 @@
 # drone
 This is just a sample project to test new technologies :)
 
-This project uses SwiftUI, clean architecture and the iOS SDK framework Combine to communicate between the different layers.
+This project is built under SOLID principles, clean architecture and MVVM. It uses SwiftUI for presentation and Combine framework to communicate between the different layers.
 
 The layers that compose this project are:
-- UI Layer:
-    - It uses MVVM for UI layer.
+- Presentation Layer:
+    - It uses MVVM for presentation layer.
     - Also it uses dependency injection to inject dependencies to the view and the view model (for example: use cases, custom objects, etc.)
-    - UI layer has its own view entities different than domain entities.
+    - The presentation layer has its own view entities different than domain entities.
 - Domain layer:
     - Business logic layer.
     - Each use case is a reusable and independent component that executes an specific business logic.
@@ -25,8 +25,7 @@ I've also created a framework called "Tracker".
 
 ## Architecture scheme:
 
-![drone_architecture_scheme](https://user-images.githubusercontent.com/28446011/214830873-cbf153f9-0efd-4891-8dee-cf5a18334285.png)
-
+![drone_architecture_scheme_v2](https://user-images.githubusercontent.com/28446011/216027660-bff8a8b0-651c-4b14-934e-fdb2b8d5ce64.png)
 
 ## Data source
 So far, the source of the data is a json located inside of the bundle called "input.json". In order to change the input params just edit this json.
