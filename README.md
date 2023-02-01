@@ -38,6 +38,7 @@ So far, the source of the data is a json located inside of the bundle called "in
 This project only contains unit tests so far.
 
 ## Next steps:
+- Move Tracker module to diferent project
 - Add UI tests
 - Improve UI design
 - Add the possibility to introduce input params from the UI, not only from the json file.
