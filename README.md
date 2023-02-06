@@ -1,5 +1,4 @@
-# drone
-This is just a sample project to test new technologies :)
+# Drone example app using Clean Architecture and MVVM
 
 This project is built under SOLID principles, clean architecture, modular architecture and MVVM in the presentation layer. It uses SwiftUI for presentation and Combine framework to communicate between the different layers.
 
